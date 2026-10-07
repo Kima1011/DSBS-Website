@@ -1315,6 +1315,198 @@ ul, ol {
 }
 
 /* ==========================================================================
+   Dual Specializations List View (Prestigious Institutional Layout)
+   ========================================================================== */
+.elite-spec-list-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.elite-spec-list-card {
+  background: var(--elite-white);
+  border: 1px solid var(--elite-border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elite-md);
+  overflow: hidden;
+  border-top: 3px solid var(--elite-gold);
+}
+
+.elite-spec-list-header {
+  background: var(--elite-platinum);
+  padding: 1.75rem 2.5rem;
+  border-bottom: 1px solid var(--elite-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.elite-spec-list-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.elite-spec-list-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--elite-navy);
+  color: var(--elite-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.elite-spec-list-title-wrap h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--elite-navy);
+  margin-bottom: 0.2rem;
+}
+
+.elite-spec-list-title-wrap p {
+  font-size: 0.85rem;
+  color: var(--elite-text-muted);
+}
+
+.elite-spec-count-badge {
+  background: var(--elite-navy);
+  color: var(--elite-gold);
+  font-family: var(--font-sans);
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--elite-gold-border);
+  white-space: nowrap;
+}
+
+.elite-spec-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--elite-white);
+}
+
+.elite-spec-list-col {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.elite-spec-list-col:first-child {
+  border-right: 1px solid var(--elite-border-subtle);
+}
+
+.elite-spec-list-item {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 2.25rem;
+  border-bottom: 1px solid var(--elite-border-subtle);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  background: var(--elite-white);
+}
+
+.elite-spec-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--elite-gold-rich), var(--elite-gold));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.elite-spec-list-item:hover {
+  background: #FAF8F5;
+  padding-left: 2.65rem;
+}
+
+.elite-spec-list-item:hover::before {
+  opacity: 1;
+}
+
+.elite-spec-list-num {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--elite-gold);
+  background: var(--elite-gold-light);
+  border: 1px solid var(--elite-gold-border);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-xs);
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+.elite-spec-list-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--elite-navy);
+  flex: 1;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.elite-spec-list-item:hover .elite-spec-list-name {
+  color: var(--elite-crimson);
+}
+
+.elite-spec-list-arrow {
+  font-size: 0.75rem;
+  color: var(--elite-text-light);
+  opacity: 0.35;
+  transform: translateX(-4px);
+  transition: all 0.25s ease;
+  margin-left: 0.75rem;
+}
+
+.elite-spec-list-item:hover .elite-spec-list-arrow {
+  opacity: 1;
+  color: var(--elite-gold);
+  transform: translateX(0);
+}
+
+.elite-spec-list-footer {
+  padding: 2.25rem;
+  text-align: center;
+  background: var(--elite-platinum);
+  border-top: 1px solid var(--elite-border-subtle);
+}
+
+@media (max-width: 768px) {
+  .elite-spec-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+  .elite-spec-list-grid {
+    grid-template-columns: 1fr;
+  }
+  .elite-spec-list-col:first-child {
+    border-right: none;
+  }
+  .elite-spec-list-item {
+    padding: 1.1rem 1.35rem;
+  }
+  .elite-spec-list-item:hover {
+    padding-left: 1.65rem;
+  }
+}
+
+/* ==========================================================================
    11. BOTTOM CALL TO ACTION BANNER
    ========================================================================== */
 .elite-cta-banner-section {
