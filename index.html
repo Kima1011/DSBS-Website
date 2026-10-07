@@ -1564,14 +1564,16 @@ footer#sp-footer.sp-footer-custom {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 3.5rem;
 }
 
 /* Left Brand Column (Navy Blue Area) */
 .footer-col-brand {
-  flex: 0 0 35%;
-  max-width: 35%;
-  padding-right: 35px;
+  flex: 0 1 360px;
+  max-width: 380px;
+  min-width: 280px;
+  padding-right: 0;
 }
 .footer-logo-wrap {
   margin-bottom: 22px;
@@ -1647,9 +1649,10 @@ footer#sp-footer.sp-footer-custom {
 }
 
 .footer-col-contact {
-  flex: 0 0 23%;
-  max-width: 23%;
-  padding-left: 10px;
+  flex: 0 1 460px;
+  max-width: 480px;
+  min-width: 280px;
+  padding-left: 0;
 }
 
 /* List Items with Chevrons */
@@ -1753,17 +1756,21 @@ footer#sp-footer.sp-footer-custom {
 
 /* Responsive Footer */
 @media (max-width: 991px) {
+  .footer-grid-row {
+    gap: 2.5rem;
+  }
   .footer-col-brand {
-    flex: 0 0 100%;
+    flex: 0 1 340px;
     max-width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     padding-right: 0;
   }
   .footer-col-links,
   .footer-col-specialization,
   .footer-col-contact {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
+    flex: 1 1 340px;
+    max-width: 100%;
+    padding: 0;
   }
   .footer-copyright-row {
     text-align: center;
@@ -1771,12 +1778,17 @@ footer#sp-footer.sp-footer-custom {
   }
 }
 @media (max-width: 767px) {
+  .footer-grid-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-col-brand,
   .footer-col-links,
   .footer-col-specialization,
   .footer-col-contact {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding: 0;
   }
 }
