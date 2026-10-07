@@ -858,19 +858,21 @@ table.category thead > tr th, table.category tbody > tr th, table.category thead
   position: fixed;
   bottom: 100px;
   right: 27px;
-  width: 54px;
-  height: 54px;
-  line-height: 54px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
   text-align: center;
-  font-size: 20px;
-  color: #fff;
-  background-color: #333;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 22px 22px;
+  font-size: 24px;
+  color: #14B8A6;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='none' stroke='%2314B8A6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 28px 28px !important;
+  border: none !important;
   border-radius: 50%;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  box-shadow: none !important;
   z-index: 99980;
   transition: all 0.25s ease;
   cursor: pointer;
@@ -883,11 +885,12 @@ table.category thead > tr th, table.category tbody > tr th, table.category thead
   display: none !important;
 }
 .sp-scroll-up:hover, .sp-scroll-up:active, .sp-scroll-up:focus {
-  color: #fff;
-  background-color: #a22531;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E");
-  transform: translateY(-3px) scale(1.08);
-  box-shadow: 0 6px 22px rgba(162, 37, 49, 0.5);
+  color: #0F766E;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='none' stroke='%230F766E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  transform: translateY(-4px) scale(1.15);
+  box-shadow: none !important;
 }
 .sp-scroll-up:has(svg) {
   background-image: none !important;
