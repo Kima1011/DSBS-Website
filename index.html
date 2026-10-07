@@ -2799,6 +2799,39 @@ footer#sp-footer.sp-footer-custom {
   background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
   box-shadow: 0 6px 25px rgba(20, 184, 166, 0.45) !important;
 }
+
+/* ExtraaEdge DSBS Buddy repositioning beside green button to prevent overlap */
+#__eedivChatMain #__eechatIcon {
+  right: 102px !important;
+  bottom: 23px !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#__eedivChatMain #__eechatIcon:hover {
+  transform: scale(1.08);
+}
+#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
+  right: 184px !important;
+  bottom: 25px !important;
+  z-index: 214483647 !important;
+}
+#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after {
+  right: 170px !important;
+  bottom: 51px !important;
+  z-index: 214483647 !important;
+}
+
+@media (max-width: 600px) {
+  #__eedivChatMain #__eechatIcon {
+    right: 95px !important;
+    bottom: 23px !important;
+  }
+  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
+    right: 170px !important;
+  }
+  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after {
+    right: 156px !important;
+  }
+}
 #dsbs-chat-window {
   background: #FFFFFF !important;
   border: 1px solid #e2e8f0 !important;

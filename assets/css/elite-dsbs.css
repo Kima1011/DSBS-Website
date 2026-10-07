@@ -2421,3 +2421,38 @@ ul, ol {
     display: none; /* Avoid obstructing very small mobile viewport */
   }
 }
+
+/* ==========================================================================
+   EXTRAAEDGE DSBS BUDDY CHATBOT OVERRIDE (Reposition beside green trigger)
+   ========================================================================== */
+#__eedivChatMain #__eechatIcon {
+  right: 102px !important;
+  bottom: 23px !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#__eedivChatMain #__eechatIcon:hover {
+  transform: scale(1.08);
+}
+#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
+  right: 184px !important;
+  bottom: 25px !important;
+  z-index: 214483647 !important;
+}
+#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after {
+  right: 170px !important;
+  bottom: 51px !important;
+  z-index: 214483647 !important;
+}
+
+@media (max-width: 600px) {
+  #__eedivChatMain #__eechatIcon {
+    right: 95px !important;
+    bottom: 23px !important;
+  }
+  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
+    right: 170px !important;
+  }
+  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after {
+    right: 156px !important;
+  }
+}
