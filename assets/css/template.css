@@ -2396,16 +2396,20 @@ div.mod-languages .dropdown-menu li {
   display: none;
 }
 #video-tour-area .custom.video-tour a.btn-join {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 27px;
   background-color: #272f54;
   color: #fff;
   height: 48px;
-  line-height: 48px;
+  line-height: 1;
   padding: 0 44px;
+  box-sizing: border-box;
   font-size: 13px;
   font-weight: 600;
   border-radius: 30px;
+  vertical-align: middle;
 }
 #video-tour-area .custom.video-tour a.btn-join:hover {
   color: #ec430f;
