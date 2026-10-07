@@ -1544,22 +1544,22 @@ footer#sp-footer.sp-footer-custom {
   width: 100% !important;
 }
 
-.accred-divider {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-  width: 100% !important;
-}
-
-.accred-divider img {
-  height: 14px;
-  width: auto;
-  filter: brightness(0) invert(1); /* Clean white flourish ornament */
-  opacity: 0.95;
-  margin: 0 auto !important;
-  display: block !important;
+/* Decorative flourish divider removed from all pages and sections */
+.accred-divider,
+img[src*="icontitlesmall"],
+#sp-slide .yt-content-slider .content h3.title-small:before,
+.custom.course-category-area h2:before,
+.trending-course-area .sj-extra-slider h2.heading-title:before,
+#video-tour-area .custom.video-tour h2.title:before,
+#upcoming-event h3.sppb-title-heading:before,
+#courses-free .custom.video-tour h2.title:before,
+#teacher-area h3.sppb-title-heading:before,
+#testimonial-area h3.sppb-title-heading:before,
+#blog-area .sj-extraslider h2.heading-title:before,
+.custom.accreditations h2:before,
+#g-about h1.title:before {
+  display: none !important;
+  content: none !important;
 }
 
 .accred-slider-container {
@@ -3588,8 +3588,7 @@ img#__eechatIcon {
 <section class="sppb-section top-recruiters-section" id="section-id-1562059641286" style="padding: 70px 0 75px; background: radial-gradient(ellipse at 50% 20%, #26466D 0%, #1E3A5F 65%, #152B47 100%) !important; background-color: #1E3A5F !important;">
 <div class="sppb-row-container">
 <div class="sppb-section-title sppb-text-center" style="margin-bottom: 35px;">
-<h2 style="color: #ffffff !important; font-weight: 700; font-size: 32px; margin-bottom: 8px; letter-spacing: 0.3px; text-shadow: 0 2px 12px rgba(0,0,0,0.4);">Top Recruiters</h2>
-<div style="margin: 4px auto 14px; text-align: center;"><img alt="divider" src="images/icontitlesmall-2.png" style="height: 14px; width: auto; filter: brightness(0) invert(1); opacity: 0.92;"/></div>
+<h2 style="color: #ffffff !important; font-weight: 700; font-size: 32px; margin-bottom: 14px; letter-spacing: 0.3px; text-shadow: 0 2px 12px rgba(0,0,0,0.4);">Top Recruiters</h2>
 <p style="color: #e2e8f0 !important; font-size: 16px; max-width: 750px; margin: 0 auto; line-height: 1.6; text-shadow: 0 1px 4px rgba(0,0,0,0.3);">Admin Business School is one of the top Management Institutes at Bangalore with a consistent record of good placements for our management students.</p>
 </div>
 <div class="recruiter-marquee">
@@ -3722,10 +3721,7 @@ img#__eechatIcon {
 <section class="sppb-section accred-section-wrap" id="section-id-1660887461209" style="background: radial-gradient(ellipse at 50% 20%, #26466D 0%, #1E3A5F 65%, #152B47 100%) !important; background-color: #1E3A5F !important;">
 <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 15px;">
 <div class="accred-header" style="text-align: center !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; margin: 0 auto 28px auto !important; width: 100% !important;">
-<h2 class="accred-title" style="text-align: center !important; margin: 0 auto 8px auto !important; width: 100% !important;">Accreditations and Associations</h2>
-<div class="accred-divider" style="display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 auto !important; width: 100% !important;">
-<img alt="divider" src="images/icontitlesmall-2.png" style="margin: 0 auto !important; display: block !important;"/>
-</div>
+<h2 class="accred-title" style="text-align: center !important; margin: 0 auto !important; width: 100% !important;">Accreditations and Associations</h2>
 </div>
 <div class="accred-slider-container">
 <button class="accred-nav-btn accred-prev" onclick="scrollAccredTrack(-1)"><i class="fa fa-chevron-left"></i></button>

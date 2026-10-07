@@ -23,9 +23,8 @@
   display: none;
 }
 .custom.accreditations h2:before {
-    content: url(../images/icontitlesmall-1.png);
-    position: absolute;
-    top: 35px;
+    content: none !important;
+    display: none !important;
 }
 @media (max-width: 768px) {
     .header-right #main-menu {
@@ -264,10 +263,8 @@ p{
   font-size: 24px;
 }
 #g-about h1.title:before{
-  content: url(../images/icontitlesmall-2.png);
-  position: absolute;
-  left: auto;
-  top: 30px;
+  content: none !important;
+  display: none !important;
 }
 .sp-megamenu-parent .sp-dropdown .sp-dropdown-inner{
   border-top: 2px solid #a22531;

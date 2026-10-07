@@ -1922,10 +1922,8 @@ div.mod-languages .dropdown-menu li {
   opacity: 0;
 }
 #sp-slide .yt-content-slider .content h3.title-small:before {
-  content: url('../images/icontitlesmall-1.png');
-  position: absolute;
-  left: 48%;
-  bottom: -36px;
+  content: none !important;
+  display: none !important;
 }
 #sp-slide .yt-content-slider .content p.des {
   font-style: italic;
@@ -2108,10 +2106,8 @@ div.mod-languages .dropdown-menu li {
   margin-bottom: 60px;
 }
 .custom.course-category-area h2:before {
-  content: url(../images/icontitlesmall-1.png);
-  position: absolute;
-  left: 0%;
-  bottom: -30px;
+  content: none !important;
+  display: none !important;
 }
 .custom.course-category-area .yt-carousel .owl-item:hover .yt-carousel-slide {
   background-color: #fff;
@@ -2212,10 +2208,8 @@ div.mod-languages .dropdown-menu li {
   margin-bottom: 54px;
 }
 .trending-course-area .sj-extra-slider h2.heading-title:before {
-  content: url(../images/icontitlesmall-2.png);
-  position: absolute;
-  left: 46%;
-  bottom: -30px;
+  content: none !important;
+  display: none !important;
 }
 .trending-course-area .sj-extra-slider .pre-text {
   text-align: center;
@@ -2370,10 +2364,8 @@ div.mod-languages .dropdown-menu li {
   margin-bottom: 94px;
 }
 #video-tour-area .custom.video-tour h2.title:before {
-  content: url(../images/icontitlesmall-1.png);
-  position: absolute;
-  left: 0%;
-  bottom: -42px;
+  content: none !important;
+  display: none !important;
 }
 #video-tour-area .custom.video-tour p {
   font-style: italic;
@@ -2445,10 +2437,8 @@ div.mod-languages .dropdown-menu li {
   margin-bottom: 60px;
 }
 #upcoming-event h3.sppb-title-heading:before {
-  content: url(../images/icontitlesmall-2.png);
-  position: absolute;
-  left: 47%;
-  bottom: -31px;
+  content: none !important;
+  display: none !important;
 }
 #upcoming-event p.sppb-title-subheading {
   color: #777;
@@ -2532,10 +2522,8 @@ div.mod-languages .dropdown-menu li {
   margin-bottom: 67px;
 }
 #courses-free .custom.video-tour h2.title:before {
-  content: url(../images/icontitlesmall-1.png);
-  position: absolute;
-  left: 0%;
-  bottom: -38px;
+  content: none !important;
+  display: none !important;
 }
 #courses-free .custom.video-tour p {
   font-style: italic;
@@ -2582,10 +2570,8 @@ div.mod-languages .dropdown-menu li {
   position: relative;
 }
 #teacher-area h3.sppb-title-heading:before {
-  content: url(../images/icontitlesmall-2.png);
-  position: absolute;
-  left: 46%;
-  bottom: -24px;
+  content: none !important;
+  display: none !important;
 }
 #teacher-area p.sppb-title-subheading {
   color: #777;
@@ -2627,10 +2613,8 @@ div.mod-languages .dropdown-menu li {
   position: relative;
 }
 #testimonial-area h3.sppb-title-heading:before {
-  content: url(../images/icontitlesmall-2.png);
-  position: absolute;
-  left: 48%;
-  bottom: -30px;
+  content: none !important;
+  display: none !important;
 }
 #testimonial-area p.sppb-title-subheading {
   color: #777;
@@ -2663,10 +2647,8 @@ div.mod-languages .dropdown-menu li {
   padding-bottom: 0;
 }
 #blog-area .sj-extraslider h2.heading-title:before {
-  content: url(../images/icontitlesmall-2.png);
-  position: absolute;
-  left: 46%;
-  bottom: -24px;
+  content: none !important;
+  display: none !important;
 }
 #blog-area .sj-extraslider .pre-text {
   text-align: center;

@@ -1806,16 +1806,12 @@ ul, ol {
 }
 
 .accred-divider {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 auto !important;
-  width: 100% !important;
+  display: none !important;
+  content: none !important;
 }
 
 .accred-divider img {
-  margin: 0 auto !important;
-  display: block !important;
+  display: none !important;
 }
 
 .accred-slider-container {
@@ -2682,3 +2678,24 @@ img#__eechatIcon {
     height: 26px !important;
   }
 }
+
+/* ==========================================================================
+   GLOBAL REMOVAL: Decorative Flourish Divider Icons (icontitlesmall)
+   ========================================================================== */
+img[src*="icontitlesmall"],
+.accred-divider,
+#sp-slide .yt-content-slider .content h3.title-small:before,
+.custom.course-category-area h2:before,
+.trending-course-area .sj-extra-slider h2.heading-title:before,
+#video-tour-area .custom.video-tour h2.title:before,
+#upcoming-event h3.sppb-title-heading:before,
+#courses-free .custom.video-tour h2.title:before,
+#teacher-area h3.sppb-title-heading:before,
+#testimonial-area h3.sppb-title-heading:before,
+#blog-area .sj-extraslider h2.heading-title:before,
+.custom.accreditations h2:before,
+#g-about h1.title:before {
+  display: none !important;
+  content: none !important;
+}
+
