@@ -2840,29 +2840,48 @@ img#__eechatIcon {
   z-index: 214483647 !important;
 }
 
-/* Scroll-to-top button - repositioned cleanly above both chatbots */
+/* Scroll-to-top button - repositioned cleanly above both chatbots with centered arrow */
 .sp-scroll-up {
   position: fixed !important;
   bottom: 178px !important;
   right: 27px !important;
-  width: 58px !important;
-  height: 58px !important;
-  line-height: 58px !important;
+  width: 54px !important;
+  height: 54px !important;
+  line-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   text-align: center !important;
-  font-size: 16px !important;
   color: #FFFFFF !important;
   background: #071A2B !important;
-  border: 1px solid rgba(20, 184, 166, 0.4) !important;
+  border: 1.5px solid rgba(20, 184, 166, 0.45) !important;
   border-radius: 50% !important;
   box-shadow: 0 4px 18px rgba(7, 26, 43, 0.35) !important;
   z-index: 99980 !important;
   transition: all 0.25s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
 }
 .sp-scroll-up:hover {
-  background: #14B8A6 !important;
+  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
+  border-color: #14B8A6 !important;
   color: #FFFFFF !important;
-  transform: translateY(-3px) scale(1.06) !important;
+  transform: translateY(-3px) scale(1.08) !important;
   box-shadow: 0 6px 22px rgba(20, 184, 166, 0.5) !important;
+}
+.sp-scroll-up svg {
+  display: block !important;
+  margin: auto !important;
+  width: 22px !important;
+  height: 22px !important;
+  stroke: #FFFFFF !important;
+  stroke-width: 2.5 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  transition: transform 0.2s ease !important;
+}
+.sp-scroll-up:hover svg {
+  transform: translateY(-2px) !important;
 }
 
 @media (max-width: 600px) {
@@ -4044,7 +4063,12 @@ upcoming education for student.</p>
 </div>
 <script src="assets/js/chat.js"></script>
 <!-- Go to top -->
-<a aria-label="Scroll Up" class="sp-scroll-up" href="#"><span aria-hidden="true" class="fa fa-chevron-up"></span></a>
+<a aria-label="Scroll Up" class="sp-scroll-up" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Scroll to Top">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</a>
 <script type="text/javascript">
 
 						function jSelectShortcode(text) {
@@ -13833,7 +13857,7 @@ window.addEventListener('scroll', function() {
   var scrollUp = document.querySelector('.sp-scroll-up');
   if (scrollUp) {
     if (st > 300) {
-      scrollUp.style.display = 'block';
+      scrollUp.style.display = 'flex';
     } else {
       scrollUp.style.display = 'none';
     }
