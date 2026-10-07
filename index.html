@@ -2853,7 +2853,11 @@ img#__eechatIcon {
   justify-content: center !important;
   text-align: center !important;
   color: #FFFFFF !important;
-  background: #071A2B !important;
+  background-color: #071A2B !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 22px 22px !important;
   border: 1.5px solid rgba(20, 184, 166, 0.45) !important;
   border-radius: 50% !important;
   box-shadow: 0 4px 18px rgba(7, 26, 43, 0.35) !important;
@@ -2882,6 +2886,14 @@ img#__eechatIcon {
 }
 .sp-scroll-up:hover svg {
   transform: translateY(-2px) !important;
+}
+.sp-scroll-up .fa,
+.sp-scroll-up .fa-chevron-up,
+.sp-scroll-up .fa-arrow-up {
+  display: none !important;
+}
+.sp-scroll-up:has(svg) {
+  background-image: none !important;
 }
 
 @media (max-width: 600px) {

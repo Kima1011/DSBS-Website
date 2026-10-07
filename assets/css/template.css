@@ -856,24 +856,41 @@ table.category thead > tr th, table.category tbody > tr th, table.category thead
 .sp-scroll-up {
   display: none;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 70px;
-  height: 70px;
-  line-height: 80px;
+  bottom: 178px;
+  right: 27px;
+  width: 54px;
+  height: 54px;
+  line-height: 54px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   color: #fff;
-  background: #333;
+  background-color: #333;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22px 22px;
   border-radius: 50%;
-  z-index: 1000;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  z-index: 99980;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
-.sp-scroll-up .fa.fa-chevron-up:before {
-  content: url(../images/arrow.png);
+.sp-scroll-up .fa.fa-chevron-up:before,
+.sp-scroll-up .fa-arrow-up:before,
+.sp-scroll-up .fa:before {
+  content: "" !important;
+  display: none !important;
 }
 .sp-scroll-up:hover, .sp-scroll-up:active, .sp-scroll-up:focus {
   color: #fff;
-  background: #a22531;
+  background-color: #a22531;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E");
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 22px rgba(162, 37, 49, 0.5);
+}
+.sp-scroll-up:has(svg) {
+  background-image: none !important;
 }
 .control-group {
   margin-bottom: 1rem;

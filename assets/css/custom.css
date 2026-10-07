@@ -65,7 +65,64 @@
   }
 }
 
-.sp-scroll-up { bottom: 178px; right: 27px;}
+.sp-scroll-up {
+  bottom: 178px !important;
+  right: 27px !important;
+  width: 54px !important;
+  height: 54px !important;
+  line-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  color: #FFFFFF !important;
+  background-color: #071A2B !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='19' x2='12' y2='5'%3E%3C/line%3E%3Cpolyline points='5 12 12 5 19 12'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 22px 22px !important;
+  border: 1.5px solid rgba(20, 184, 166, 0.45) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 18px rgba(7, 26, 43, 0.35) !important;
+  z-index: 99980 !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+.sp-scroll-up:hover {
+  background-color: #0F766E !important;
+  border-color: #14B8A6 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-3px) scale(1.08) !important;
+  box-shadow: 0 6px 22px rgba(20, 184, 166, 0.5) !important;
+}
+
+.sp-scroll-up svg {
+  display: block !important;
+  margin: auto !important;
+  width: 22px !important;
+  height: 22px !important;
+  stroke: #FFFFFF !important;
+  stroke-width: 2.5 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  transition: transform 0.2s ease !important;
+}
+
+.sp-scroll-up:hover svg {
+  transform: translateY(-2px) !important;
+}
+
+.sp-scroll-up .fa,
+.sp-scroll-up .fa-chevron-up,
+.sp-scroll-up .fa-arrow-up {
+  display: none !important;
+}
+
+.sp-scroll-up:has(svg) {
+  background-image: none !important;
+}
 
 .com-media.view-imagesList ul.manager > li.thumbnail > a > div:first-child > span, .com-media.view-imagesList ul.manager > li.thumbnail > a > div:first-child > span:before {		
   background-color: #92ceff;	
