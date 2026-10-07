@@ -1,0 +1,9 @@
+# Python scripts
+*.py
+__pycache__/
+
+# Logs & Temporary files
+*.log
+live_homepage.html
+.vscode/
+.idea/

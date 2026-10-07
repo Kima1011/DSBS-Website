@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aujp_0qiz-afTfcIyoiGtm2P0wG089z4eWVxg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aujp_0qiz-afTfcIyoiGtm2P0wG05Fz4eWVxg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aujp_0qiz-afTfcIyoiGtm2P0wG06Nz4eWVxg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aujp_0qiz-afTfcIyoiGtm2P0wG03Z04eWVxg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aujp_0qiz-afTfcIyoiGtm2P0wG0zh04eWVxg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aulp_0qiz-aVz7u3PJLcUMYOFmQkEk40e0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkEk40e0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aulp_0qiz-aVz7u3PJLcUMYOFn8kEk40e0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aulp_0qiz-aVz7u3PJLcUMYOFkpl0k40e0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v34/7Aulp_0qiz-aVz7u3PJLcUMYOFlnl0k40e0.ttf) format('truetype');
+}
