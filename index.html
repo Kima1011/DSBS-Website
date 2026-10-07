@@ -769,148 +769,7 @@ header.header.is-sticky {
     font-style: normal;
 }
 
-/* Enhanced Sticky Social Pull-out Tabs */
-.sticky-social {
-    position: fixed;
-    right: 0;
-    top: 25vh;
-    z-index: 9998;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-.sticky-social .main-sticky {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.sticky-social .main-sticky li.drop-social {
-    position: relative;
-    height: 50px;
-    margin-bottom: 8px;
-}
-.sticky-social .sub-social-icons {
-    position: absolute;
-    right: -212px;
-    top: 0;
-    width: 260px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    border-radius: 25px 0 0 25px;
-    box-shadow: -3px 3px 12px rgba(0,0,0,0.18);
-    transition: right 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-    z-index: 9999;
-    padding: 0 10px;
-    overflow: hidden;
-}
-.sticky-social .sub-social-icons.whatsapp {
-    background: linear-gradient(135deg, #25D366, #128C7E) !important;
-}
-.sticky-social .sub-social-icons.phone {
-    background: linear-gradient(135deg, #f35609, #d03d00) !important;
-}
-.sticky-social .sub-social-icons.social-group {
-    background: #4286f4 !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-}
-.sticky-social .sub-social-icons.social-group .social-tab-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    position: relative;
-}
-.sticky-social .sub-social-icons.social-group .social-tab-item.handle {
-    width: 48px;
-    min-width: 48px;
-}
-.sticky-social .sub-social-icons.social-group .social-tab-item:not(.handle) {
-    flex: 1;
-}
-.sticky-social .sub-social-icons.social-group .social-tab-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 22px;
-    border-right: 1px dashed rgba(255, 255, 255, 0.7);
-}
-.sticky-social .sub-social-icons.social-group .social-tab-item img {
-    width: 22px;
-    height: 22px;
-    display: block;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
-    transition: transform 0.2s ease;
-}
-.sticky-social .sub-social-icons.social-group .social-tab-item a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-.sticky-social .sub-social-icons.social-group .social-tab-item a:hover img {
-    transform: scale(1.18);
-}
-.sticky-social .drop-social:hover .sub-social-icons.whatsapp {
-    right: 0 !important;
-}
-.sticky-social .drop-social:hover .sub-social-icons.phone {
-    right: 0 !important;
-}
-.sticky-social .drop-social:hover .sub-social-icons.social-group {
-    right: 0 !important;
-}
-.sticky-social .sub-social-icons a {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    line-height: 1.2;
-}
-.sticky-social .sub-social-icons img {
-    width: 24px;
-    height: 24px;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
-}
-
-/* Red Vertical Apply Now Tab - Touching the Right Edge */
-.ee-register-now.right {
-    position: fixed;
-    right: 0 !important;
-    top: calc(25vh + 140px) !important;
-    z-index: 9999 !important;
-    transform: rotate(270deg) !important;
-    transform-origin: bottom right !important;
-    line-height: 0;
-}
-.applyNow-button {
-    background: linear-gradient(135deg, #e60023, #c4001a) !important;
-    color: #fff !important;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px 22px;
-    border-radius: 8px 8px 0 0;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 -4px 15px rgba(230, 0, 35, 0.4);
-    display: block;
-    margin: 0;
-    transition: all 0.25s ease;
-}
-.applyNow-button:hover {
-    background: linear-gradient(135deg, #3e4095, #26286b) !important;
-    box-shadow: 0 -6px 20px rgba(62, 64, 149, 0.5);
-    transform: translateY(-4px);
-}
+/* Right Sticky Action Bar is styled in assets/css/elite-dsbs.css */
 
 /* Pull-Out Admission Enquiry Drawer */
 #enquiry-drawer-overlay {
@@ -3308,8 +3167,8 @@ footer#sp-footer.sp-footer-custom {
       </ul>
     </div>
     <div class="ee-register-now right">
-      <button class="applyNow-button" onclick="openEnquiryDrawer('Apply Now Button')">
-        Apply Now!
+      <button class="applyNow-button" onclick="openEnquiryDrawer('Apply Now Button')" aria-label="Apply Now">
+        APPLY NOW!
       </button>
     </div>
   </section>
