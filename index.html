@@ -2061,15 +2061,17 @@ footer#sp-footer.sp-footer-custom {
   .accred-next { right: 5px; }
 }
 </style>
-<style id="dsbs-dual-specialization-olive">
-/* --- DUAL SPECIALIZATION SECTION: DARK OLIVE GREEN BACKGROUND --- */
+<style id="dsbs-dual-specialization-red-gold">
+/* --- DUAL SPECIALIZATION SECTION: CRIMSON RED (#A22531) & GOLDEN YELLOW (#F6C640) WITH CHEVRON FLAP --- */
 #column-id-1562056026521 {
-  background: #556b2f !important; /* Dark Olive Green */
-  background-color: #556b2f !important;
+  background: #a22531 !important;
+  background-color: #a22531 !important;
   background-image: none !important;
-  border-radius: 8px !important;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.22) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22) !important;
   overflow: hidden !important;
+  border: none !important;
+  margin-top: 0 !important;
 }
 .custombanner-btm,
 .custombanner-btm .sp-position2,
@@ -2080,8 +2082,10 @@ footer#sp-footer.sp-footer-custom {
   box-shadow: none !important;
 }
 
-#column-id-1562056026521 {
-  margin-top: 0 !important;
+.custombanner-btm .sp-position2.sj-k2-filter.vertical-layout .row .col-md-12:nth-child(1) {
+  background-color: #a22531 !important;
+  padding: 0 !important;
+  position: relative !important;
 }
 
 .custombanner-btm h3.block-subtitle {
@@ -2090,7 +2094,7 @@ footer#sp-footer.sp-footer-custom {
   font-weight: 700 !important;
   padding: 22px 20px 16px 25px !important;
   margin: 0 0 10px 0 !important;
-  border-bottom: 2px solid #a22531 !important; /* Red divider line from user screenshot */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
@@ -2107,47 +2111,82 @@ footer#sp-footer.sp-footer-custom {
 .custombanner-btm ul.menu {
   color: #ffffff !important;
   list-style: disc !important;
-  padding: 10px 20px 15px 48px !important;
+  padding: 10px 20px 18px 48px !important;
   margin: 0 !important;
   line-height: 28px !important;
   text-align: left !important;
 }
 
-.custombanner-btm ul.menu li {
+.custombanner-btm ul.menu li,
+#column-id-1562056026521 li {
   color: #ffffff !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
   list-style: disc !important;
   list-style-type: disc !important;
   padding-left: 4px !important;
   margin-bottom: 3px !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2) !important;
+}
+
+.custombanner-btm ul.menu li::marker,
+#column-id-1562056026521 ul.menu li::marker {
+  color: #ffffff !important;
+}
+
+.custombanner-btm .dual-spec-chevron-wrap {
+  position: relative !important;
+  width: 100% !important;
+  height: 32px !important;
+  margin-bottom: -1px !important;
+  overflow: hidden !important;
+  background: #f6c640 !important;
+  display: block !important;
+}
+
+.custombanner-btm .dual-spec-chevron-wrap svg {
+  display: block !important;
+  width: 100% !important;
+  height: 32px !important;
+}
+
+.custombanner-btm .sp-position2.sj-k2-filter.vertical-layout .row .col-md-12:nth-child(2),
+.custombanner-btm .dual-spec-button-wrap {
+  background-color: #f6c640 !important;
+  padding: 26px 15px 34px !important;
+  margin: 0 !important;
+  text-align: center !important;
+  border: none !important;
 }
 
 .custombanner-btm ul.list-button {
-  padding: 10px 0 25px !important;
   margin: 0 !important;
+  padding: 0 !important;
   text-align: center !important;
   float: none !important;
   width: 100% !important;
+  border: none !important;
 }
 
 .custombanner-btm ul.list-button li.last-item.box-submit a.btn-readmore {
   display: inline-block !important;
-  background: #272f54 !important; /* Dark Navy Pill Button from screenshot */
+  background: #272f54 !important; /* Signature Dark Navy Pill Button */
   color: #ffffff !important;
-  font-size: 14px !important;
+  font-size: 14.5px !important;
   font-weight: 700 !important;
-  padding: 10px 32px !important;
+  padding: 11px 34px !important;
   border-radius: 30px !important;
   text-decoration: none !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
-  transition: transform 0.2s ease, background 0.2s ease !important;
+  box-shadow: 0 6px 18px rgba(39, 47, 84, 0.35) !important;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease !important;
+  border: none !important;
 }
 
 .custombanner-btm ul.list-button li.last-item.box-submit a.btn-readmore:hover {
   background: #a22531 !important;
+  color: #ffffff !important;
   transform: translateY(-2px) scale(1.03) !important;
-  box-shadow: 0 6px 20px rgba(162,37,49,0.4) !important;
+  box-shadow: 0 8px 22px rgba(162, 37, 49, 0.45) !important;
 }
 </style>
 
@@ -2352,26 +2391,29 @@ main#sp-component {
   color: #334155 !important;
 }
 
-/* Dual Specialization Card: Dark Olive Green (#556b2f) with Pure White Typography */
+/* Dual Specialization Card: Crimson Red (#A22531) & Golden Yellow (#F6C640) with Chevron Flap */
 #column-id-1562056026521 {
-  background: #556b2f !important; /* Dark Olive Green */
-  background-color: #556b2f !important;
-  background-image: none !important;
-  border-radius: 12px !important;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22) !important;
+  background: #a22531 !important;
+  background-color: #a22531 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22) !important;
   overflow: hidden !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border: none !important;
 }
 .custombanner-btm,
 .custombanner-btm .sp-position2,
 .sp-position2.sj-k2-filter,
 .sp-position2.sj-k2-filter.vertical-layout {
   background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
   border: none !important;
+  box-shadow: none !important;
+}
+.custombanner-btm .sp-position2.sj-k2-filter.vertical-layout .row .col-md-12:nth-child(1) {
+  background-color: #a22531 !important;
+}
+.custombanner-btm .sp-position2.sj-k2-filter.vertical-layout .row .col-md-12:nth-child(2),
+.custombanner-btm .dual-spec-button-wrap {
+  background-color: #f6c640 !important;
 }
 .custombanner-btm h3.block-subtitle {
   color: #ffffff !important;
@@ -2379,7 +2421,7 @@ main#sp-component {
   font-weight: 700 !important;
   padding: 22px 20px 16px 25px !important;
   margin: 0 0 10px 0 !important;
-  border-bottom: 2px solid #a22531 !important; /* Accent red dividing line */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
@@ -2394,7 +2436,7 @@ main#sp-component {
 .custombanner-btm ul.menu {
   color: #ffffff !important;
   list-style: disc !important;
-  padding: 10px 20px 15px 48px !important;
+  padding: 10px 20px 18px 48px !important;
   margin: 0 !important;
   line-height: 28px !important;
   text-align: left !important;
@@ -2411,37 +2453,30 @@ main#sp-component {
   list-style-type: disc !important;
   padding-left: 4px !important;
   margin-bottom: 3px !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.25) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2) !important;
 }
 #column-id-1562056026521 ul.menu li::marker,
 .custombanner-btm ul.menu li::marker {
   color: #ffffff !important;
 }
-.custombanner-btm ul.list-button,
-.custombanner-btm .col-md-12:nth-child(2) {
-  border-top: 1px solid rgba(255, 255, 255, 0.22) !important;
-  padding: 24px 0 26px !important;
-  margin: 14px 18px 0 !important;
-  text-align: center !important;
-  float: none !important;
-  width: auto !important;
-}
 .custombanner-btm ul.list-button li.last-item.box-submit a.btn-readmore {
   display: inline-block !important;
-  background: #071A2B !important; /* Deep Navy Pill Button */
+  background: #272f54 !important; /* Signature Dark Navy Pill Button */
   color: #ffffff !important;
-  font-size: 14px !important;
+  font-size: 14.5px !important;
   font-weight: 700 !important;
-  padding: 10px 32px !important;
+  padding: 11px 34px !important;
   border-radius: 30px !important;
   text-decoration: none !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
-  transition: transform 0.2s ease, background 0.2s ease !important;
+  box-shadow: 0 6px 18px rgba(39, 47, 84, 0.35) !important;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease !important;
+  border: none !important;
 }
 .custombanner-btm ul.list-button li.last-item.box-submit a.btn-readmore:hover {
-  background: #0F766E !important;
+  background: #a22531 !important;
+  color: #ffffff !important;
   transform: translateY(-2px) scale(1.03) !important;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important;
+  box-shadow: 0 8px 22px rgba(162, 37, 49, 0.45) !important;
 }
 
 /* 5. Section: Top Recruiters
@@ -3203,8 +3238,8 @@ display:inline;
 
 </style>
 <div class="sp-position2 sj-k2-filter vertical-layout">
-<div class="row">
-<div class="col-md-12">
+<div class="row" style="margin: 0 !important;">
+<div class="col-md-12" style="background-color: #a22531 !important; padding: 0 !important; position: relative !important;">
 <h3 class="block-subtitle filter-subtitle" role="heading"><i aria-hidden="true" class="fa fa-graduation-cap"></i>Dual Specialization</h3>
 <div class="moduletablefooter-menu">
 <div class="customfooter-menu">
@@ -3221,10 +3256,17 @@ display:inline;
 <li style="color: #ffffff !important; font-weight: 600;">Tourism &amp; Hospitality Management</li>
 </ul></div>
 </div>
+<!-- Chevron Downward Flap Transition into Golden Yellow -->
+<div class="dual-spec-chevron-wrap" style="position: relative; width: 100%; height: 32px; margin-bottom: -1px; overflow: hidden; background: #f6c640;">
+<svg preserveAspectRatio="none" style="display: block; width: 100%; height: 32px;" viewBox="0 0 360 32">
+<polygon fill="#66171f" points="0,0 360,0 180,32"></polygon>
+<polygon fill="#a22531" points="0,0 360,0 180,26"></polygon>
+</svg>
 </div>
-<div class="col-md-12" style="border-top: 1px solid rgba(255, 255, 255, 0.22) !important; padding-top: 24px !important; padding-bottom: 26px !important; margin-top: 14px !important; text-align: center !important;">
+</div>
+<div class="col-md-12 dual-spec-button-wrap" style="background-color: #f6c640 !important; padding: 26px 15px 34px !important; margin: 0 !important; text-align: center !important; border: none !important;">
 <ul class="list-button" style="margin: 0 !important; padding: 0 !important; text-align: center !important; border: none !important;">
-<li class="last-item box-submit" style="list-style: none !important; margin: 0 !important; padding: 0 !important;"><a class="btn-readmore" href="https://dsbs.edu.in/apply-now" rel="noopener" target="_blank" style="display: inline-block !important; background: #071A2B !important; color: #ffffff !important; border-radius: 30px !important; padding: 10px 32px !important; font-weight: 700 !important; text-decoration: none !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;">Apply Now !</a></li>
+<li class="last-item box-submit" style="list-style: none !important; margin: 0 !important; padding: 0 !important;"><a class="btn-readmore" href="https://dsbs.edu.in/apply-now" rel="noopener" target="_blank" style="display: inline-block !important; background: #272f54 !important; color: #ffffff !important; border-radius: 30px !important; padding: 11px 34px !important; font-weight: 700 !important; font-size: 14.5px !important; text-decoration: none !important; box-shadow: 0 6px 18px rgba(39, 47, 84, 0.35) !important;">Apply Now !</a></li>
 </ul>
 </div>
 </div>
