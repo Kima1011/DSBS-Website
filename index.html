@@ -1352,17 +1352,20 @@ footer#sp-footer.sp-footer-custom {
 .footer-grid-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 2rem;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 980px;
+  margin: 0 auto 3.25rem auto;
+  padding: 0 15px;
 }
 
-/* Left Brand Column (Navy Blue Area) */
-.footer-col-brand {
-  flex: 0 1 270px;
-  max-width: 275px;
-  min-width: 250px;
-  padding-right: 0;
+/* Left Brand Column & Right Contact Column */
+.footer-col-brand,
+.footer-col-contact {
+  flex: 1 1 400px;
+  max-width: 465px;
+  min-width: 300px;
 }
 .footer-logo-wrap {
   margin-bottom: 22px;
@@ -1371,77 +1374,6 @@ footer#sp-footer.sp-footer-custom {
   max-width: 250px;
   height: auto;
   display: block;
-}
-.footer-info-block .info-row {
-  display: flex;
-  margin-bottom: 11px;
-  font-size: 13.5px;
-  line-height: 1.5;
-}
-.footer-info-block .info-label {
-  font-weight: 700;
-  width: 75px;
-  flex-shrink: 0;
-  color: #ffffff;
-}
-.footer-info-block .info-val {
-  color: #ffffff;
-}
-.footer-info-block .info-val a {
-  color: #ffffff !important;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-info-block .info-val a:hover {
-  color: #fbbf24 !important;
-}
-.footer-social-row {
-  display: flex;
-  gap: 12px;
-  margin-top: 18px;
-}
-.footer-social-row a {
-  color: #ffffff !important;
-  font-size: 15px;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, color 0.2s;
-}
-.footer-social-row a:hover {
-  transform: translateY(-2px);
-  color: #fbbf24 !important;
-}
-
-/* Right Columns (Deep Red / Maroon Area) */
-.footer-col-title {
-  color: #ffffff !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  margin-top: 0;
-  margin-bottom: 10px !important;
-  letter-spacing: 0.2px;
-}
-
-.footer-col-links {
-  flex: 0 0 18%;
-  max-width: 18%;
-  padding: 0 10px;
-}
-
-.footer-col-specialization {
-  flex: 0 0 24%;
-  max-width: 24%;
-  padding: 0 10px;
-}
-
-.footer-col-contact {
-  flex: 0 1 280px;
-  max-width: 300px;
-  min-width: 250px;
-  padding-left: 0;
 }
 
 /* List Items with Chevrons */
@@ -2520,25 +2452,248 @@ button.btn-primary:hover,
   box-shadow: 0 8px 24px rgba(20, 184, 166, 0.5) !important;
 }
 
-/* 12. Footer: Deep Navy Blue (#071A2B) */
+/* 12. Footer: Deep Navy Blue (#071A2B) - Centered Professional Dual Executive Panels */
 footer#sp-footer.sp-footer-custom {
   position: relative !important;
   background: #071A2B !important;
   background-color: #071A2B !important;
   color: #F8FAFC !important;
-  padding: 70px 0 25px !important;
+  padding: 70px 0 30px !important;
   border-top: 3px solid #0F766E !important;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3) !important;
 }
+
+/* Centered 2-Column Grid Row */
+.footer-grid-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  gap: 2.5rem !important;
+  max-width: 980px !important;
+  margin: 0 auto 3.25rem auto !important;
+  padding: 0 15px !important;
+}
+
+/* Dual Executive Panels */
+.footer-col-brand,
+.footer-col-contact {
+  flex: 1 1 400px !important;
+  max-width: 465px !important;
+  min-width: 300px !important;
+  background: linear-gradient(145deg, rgba(11, 35, 59, 0.7) 0%, rgba(5, 20, 36, 0.88) 100%) !important;
+  border: 1px solid rgba(20, 184, 166, 0.22) !important;
+  border-radius: 16px !important;
+  padding: 2.25rem 2.25rem !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.footer-col-brand:hover,
+.footer-col-contact:hover {
+  border-color: rgba(20, 184, 166, 0.45) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(20, 184, 166, 0.12) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Column 1: Brand & Logo */
+.footer-logo-wrap {
+  margin-bottom: 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.footer-logo {
+  height: 48px !important;
+  width: auto !important;
+  max-width: 220px !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: brightness(0) invert(1) !important;
+}
+
+.footer-info-block {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  flex: 1 1 auto !important;
+  justify-content: space-between !important;
+}
+
+/* Reusable Contact Item with Icon Box */
+.footer-contact-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 1rem !important;
+  transition: transform 0.2s ease !important;
+}
+
+.footer-contact-item:hover .contact-icon-box {
+  background: #14B8A6 !important;
+  color: #071A2B !important;
+  border-color: #14B8A6 !important;
+  transform: scale(1.08) !important;
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.45) !important;
+}
+
+.footer-contact-item:hover .contact-link {
+  color: #2DD4BF !important;
+}
+
+.contact-icon-box {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 10px !important;
+  background: rgba(20, 184, 166, 0.12) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  color: #14B8A6 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  transition: all 0.25s ease !important;
+  margin-top: 2px !important;
+}
+
+.contact-details {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  flex: 1 1 auto !important;
+}
+
+.contact-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  color: #14B8A6 !important;
+}
+
+.contact-value {
+  color: #F8FAFC !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+}
+
+.contact-link {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+  word-break: break-word !important;
+}
+
+.contact-link:hover {
+  color: #2DD4BF !important;
+  text-decoration: underline !important;
+}
+
+.address-text {
+  color: #CBD5E1 !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+
+.address-text .inst-name {
+  display: block !important;
+  color: #FFFFFF !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  margin-bottom: 2px !important;
+}
+
+/* Social Media Section */
+.footer-social-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.65rem !important;
+  padding-top: 1.15rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.social-label {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  color: #94A3B8 !important;
+}
+
+.footer-social-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  margin-top: 0 !important;
+  flex-wrap: wrap !important;
+}
+
+.footer-social-row a {
+  width: 36px !important;
+  height: 36px !important;
+  background: rgba(20, 184, 166, 0.1) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  color: #14B8A6 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+}
+
+.footer-social-row a:hover {
+  background: #14B8A6 !important;
+  color: #071A2B !important;
+  border-color: #14B8A6 !important;
+  transform: translateY(-3px) scale(1.1) !important;
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.45) !important;
+}
+
+/* Column 2: Key Contact */
+.footer-header-wrap {
+  margin-bottom: 1.5rem !important;
+}
+
 .footer-col-title {
   color: #FFFFFF !important;
-  font-size: 17px !important;
+  font-size: 18px !important;
   font-weight: 700 !important;
-  margin-bottom: 10px !important;
-  border-bottom: 2px solid #14B8A6 !important;
-  display: inline-block !important;
-  padding-bottom: 5px !important;
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  position: relative !important;
+  padding-bottom: 8px !important;
+  border-bottom: none !important;
 }
+
+.footer-col-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 44px !important;
+  height: 3px !important;
+  background: #14B8A6 !important;
+  border-radius: 2px !important;
+}
+
+.footer-contact-block {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.15rem !important;
+  flex: 1 1 auto !important;
+  justify-content: space-between !important;
+}
+
+/* Links & Visitor Counter */
 .footer-link-list li a {
   color: #F8FAFC !important;
   font-size: 13.5px !important;
@@ -2551,36 +2706,28 @@ footer#sp-footer.sp-footer-custom {
 .footer-link-list li a i {
   color: #14B8A6 !important;
 }
-.footer-info-block .info-label {
-  color: #14B8A6 !important;
-  font-weight: 700 !important;
-}
-.footer-info-block .info-val,
-.footer-info-block .info-val a {
-  color: #F8FAFC !important;
-  transition: color 0.2s ease !important;
-}
-.footer-info-block .info-val a:hover {
-  color: #14B8A6 !important;
-}
-.footer-social-row a {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.35) !important;
-  color: #14B8A6 !important;
-  border-radius: 50% !important;
-  transition: all 0.25s ease !important;
-}
-.footer-social-row a:hover {
-  background: #14B8A6 !important;
-  color: #FFFFFF !important;
-  transform: translateY(-3px) scale(1.1) !important;
-  box-shadow: 0 6px 18px rgba(20, 184, 166, 0.45) !important;
-}
+
 .live-counter-num {
   background: #04101D !important;
   border-color: #14B8A6 !important;
   color: #14B8A6 !important;
   font-weight: 700 !important;
+}
+
+/* Responsive Footer */
+@media (max-width: 860px) {
+  .footer-grid-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  .footer-col-brand,
+  .footer-col-contact {
+    max-width: 520px !important;
+    width: 100% !important;
+    padding: 1.85rem 1.65rem !important;
+  }
 }
 
 /* ExtraaEdge DSBS Buddy Admissions Chatbot - Corner placement almost touching edge */
@@ -3723,46 +3870,70 @@ upcoming education for student.</p>
 <footer class="sp-footer-custom" id="sp-footer">
 <div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 15px;">
 <div class="footer-grid-row">
-<!-- Column 1: Brand & Address (Navy Section) -->
-<div class="footer-col-brand">
-<div class="footer-logo-wrap">
-<img alt="Admin Business School" class="footer-logo" src="images/dsblogo-1.png"/>
-</div>
-<div class="footer-info-block">
-<div class="info-row address-row">
-<span class="info-label">Address:</span>
-<span class="info-val">
-              Admin Business School<br/>
-              Gate No.1, Building no. 15,<br/>
-              Shavige Malleshwara Hills<br/>
-              Kumaraswamy Layout<br/>
-              Bangalore - 560 111
-            </span>
-</div>
-<div class="footer-social-row">
-<a href="https://www.facebook.com/Dayananda-Sagar-Business-School-Admin Business School-102601089234953" rel="noopener" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
-<a href="https://www.instagram.com/dsbs_pgdm/" rel="noopener" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
-<a href="https://www.linkedin.com/in/dsbs-pgdm-55bb971ba/" rel="noopener" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-<a href="https://twitter.com/Admin Business SchoolBangalore" rel="noopener" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
-<a href="https://www.youtube.com/channel/UCnRQwVkePxNlBzyo3zte6fg" rel="noopener" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a>
-<a href="https://dsbsbangalore.blogspot.com/" rel="noopener" target="_blank" title="Blog"><i class="fa fa-rss"></i></a>
-</div>
-</div>
-</div>
+      <!-- Column 1: Brand & Campus Address -->
+      <div class="footer-col-brand">
+        <div class="footer-logo-wrap">
+          <img alt="Admin Business School" class="footer-logo" src="images/dsblogo-1.png"/>
+        </div>
+        <div class="footer-info-block">
+          <div class="footer-contact-item address-item info-row address-row">
+            <div class="contact-icon-box"><i class="fa fa-map-marker"></i></div>
+            <div class="contact-details">
+              <span class="contact-label info-label">Address</span>
+              <div class="contact-value info-val address-text">
+                <span class="inst-name">Admin Business School</span>
+                Gate No.1, Building no. 15, Shavige Malleshwara Hills,<br/>
+                Kumaraswamy Layout, Bangalore - 560 111
+              </div>
+            </div>
+          </div>
+          <div class="footer-social-section">
+            <span class="social-label">Connect With Us</span>
+            <div class="footer-social-row">
+              <a href="https://www.facebook.com/Dayananda-Sagar-Business-School-Admin Business School-102601089234953" rel="noopener" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/dsbs_pgdm/" rel="noopener" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/dsbs-pgdm-55bb971ba/" rel="noopener" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+              <a href="https://twitter.com/Admin Business SchoolBangalore" rel="noopener" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.youtube.com/channel/UCnRQwVkePxNlBzyo3zte6fg" rel="noopener" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+              <a href="https://dsbsbangalore.blogspot.com/" rel="noopener" target="_blank" title="Blog"><i class="fa fa-rss"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Column 3: Key Contact (Maroon Section) -->
+      <!-- Column 2: Key Contact -->
       <div class="footer-col-contact">
-        <h3 class="footer-col-title">Key Contact</h3>
+        <div class="footer-header-wrap">
+          <h3 class="footer-col-title"><i class="fa fa-address-book-o"></i> Key Contact</h3>
+        </div>
         <div class="footer-contact-block">
-          <p class="contact-highlight">Registrar : <a href="mailto:registrar@dsbs.edu.in">registrar@dsbs.edu.in</a></p>
-          <div class="contact-item">
-            <strong>Phone:</strong> <a href="tel:+918042161704">+91 80 42161704</a>
+          <div class="footer-contact-item contact-item contact-highlight">
+            <div class="contact-icon-box"><i class="fa fa-graduation-cap"></i></div>
+            <div class="contact-details">
+              <span class="contact-label">Registrar</span>
+              <a class="contact-value contact-link" href="mailto:registrar@dsbs.edu.in">registrar@dsbs.edu.in</a>
+            </div>
           </div>
-          <div class="contact-item">
-            <strong>Mobile:</strong> <a href="tel:+919611515262">+91 9611515262</a>
+          <div class="footer-contact-item contact-item">
+            <div class="contact-icon-box"><i class="fa fa-phone"></i></div>
+            <div class="contact-details">
+              <span class="contact-label">Phone</span>
+              <a class="contact-value contact-link" href="tel:+918042161704">+91 80 42161704</a>
+            </div>
           </div>
-          <div class="contact-item">
-            <strong>E-mail:</strong> <a href="mailto:admissions@dsbs.edu.in">admissions@dsbs.edu.in</a>
+          <div class="footer-contact-item contact-item">
+            <div class="contact-icon-box"><i class="fa fa-mobile" style="font-size: 1.35rem;"></i></div>
+            <div class="contact-details">
+              <span class="contact-label">Mobile</span>
+              <a class="contact-value contact-link" href="tel:+919611515262">+91 9611515262</a>
+            </div>
+          </div>
+          <div class="footer-contact-item contact-item">
+            <div class="contact-icon-box"><i class="fa fa-envelope-o"></i></div>
+            <div class="contact-details">
+              <span class="contact-label">E-mail</span>
+              <a class="contact-value contact-link" href="mailto:admissions@dsbs.edu.in">admissions@dsbs.edu.in</a>
+            </div>
           </div>
         </div>
       </div>
