@@ -1649,8 +1649,8 @@ footer#sp-footer.sp-footer-custom {
 }
 
 .footer-col-contact {
-  flex: 0 1 460px;
-  max-width: 480px;
+  flex: 0 1 540px;
+  max-width: 580px;
   min-width: 280px;
   padding-left: 0;
 }
@@ -1710,6 +1710,13 @@ footer#sp-footer.sp-footer-custom {
 .footer-contact-block {
   font-size: 13px;
   line-height: 1.45;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+}
+.footer-contact-details {
+  flex: 0 0 auto;
 }
 .contact-highlight {
   margin-bottom: 12px;
@@ -1720,8 +1727,9 @@ footer#sp-footer.sp-footer-custom {
   text-decoration: none;
 }
 .contact-address-sub {
-  margin-bottom: 12px;
+  margin-bottom: 0;
   line-height: 1.45;
+  flex: 0 0 auto;
 }
 .contact-item {
   margin-bottom: 7px;
@@ -1781,6 +1789,10 @@ footer#sp-footer.sp-footer-custom {
   .footer-grid-row {
     flex-direction: column;
     gap: 2rem;
+  }
+  .footer-contact-block {
+    flex-direction: column;
+    gap: 1.25rem;
   }
   .footer-col-brand,
   .footer-col-links,
@@ -3892,6 +3904,18 @@ upcoming education for student.</p>
       <div class="footer-col-contact">
         <h3 class="footer-col-title">Key Contact</h3>
         <div class="footer-contact-block">
+          <div class="footer-contact-details">
+            <p class="contact-highlight">Registrar : <a href="mailto:registrar@dsbs.edu.in">registrar@dsbs.edu.in</a></p>
+            <div class="contact-item">
+              <strong>Phone:</strong> <a href="tel:+918042161704">+91 80 42161704</a>
+            </div>
+            <div class="contact-item">
+              <strong>Mobile:</strong> <a href="tel:+919611515262">+91 9611515262</a>
+            </div>
+            <div class="contact-item">
+              <strong>E-mail:</strong> <a href="mailto:admissions@dsbs.edu.in">admissions@dsbs.edu.in</a>
+            </div>
+          </div>
           <div class="contact-address-sub">
             <strong>Admission Team</strong><br/>
             Admin Business School<br/>
@@ -3899,16 +3923,6 @@ upcoming education for student.</p>
             Shavige Malleshwara Hills<br/>
             Kumaraswamy Layout<br/>
             Bangalore - 560 111
-          </div>
-          <p class="contact-highlight">Registrar : <a href="mailto:registrar@dsbs.edu.in">registrar@dsbs.edu.in</a></p>
-          <div class="contact-item">
-            <strong>Phone:</strong> <a href="tel:+918042161704">+91 80 42161704</a>
-          </div>
-          <div class="contact-item">
-            <strong>Mobile:</strong> <a href="tel:+919611515262">+91 9611515262</a>
-          </div>
-          <div class="contact-item">
-            <strong>E-mail:</strong> <a href="mailto:admissions@dsbs.edu.in">admissions@dsbs.edu.in</a>
           </div>
         </div>
       </div>
