@@ -2276,6 +2276,11 @@ ul, ol {
   font-size: 0.875rem;
 }
 
+/* Campus Tour - Red background replaced with Deep Royal Navy */
+#column-id-1562208262469 {
+  background-color: var(--elite-navy-deep, #0B192C) !important;
+}
+
 /* ==========================================================================
    15. RESPONSIVE MEDIA QUERIES
    ========================================================================== */
