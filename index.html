@@ -2081,24 +2081,20 @@ footer#sp-footer.sp-footer-custom {
 }
 </style>
 
+
 <style id="dsbs-modern-premium-theme">
 /* ==========================================================================
-   MODERN PREMIUM COLOR PALETTE SYSTEM: NAVY + TEAL + WHITE
-   Palette Tokens:
-     #071A2B — Deep Navy (Dominant Canvas & Dark Sections)
-     #0B253D — Elevated Navy (Card Containers & Interactive Surfaces)
-     #04101D — Ultra Deep Navy (Header Top Bar & Footer)
-     #0F766E — Teal (Primary Interactive & Brand Accent)
-     #14B8A6 — Bright Teal (Electric Accent, Badges, Borders, Glowing Hover)
-     #F8FAFC — Off White (High-Legibility Body Text, Descriptions & Subtitles)
-     #FFFFFF — White (Crisp Titles, Pure Card Backdrops & High Contrast)
-   Visual Feel: Modern • Technology-focused • Clean • International
+   HARMONIOUS MODERN INTERNATIONAL 4-COLOR PALETTE SYSTEM:
+     1. Deep Navy Blue (#071A2B) — Authoritative Prestige Sections & Anchor Cards
+     2. Off-White      (#F8FAFC) — Clean, Fresh, International Section Canvas
+     3. Teal           (#0F766E / #14B8A6) — Dynamic Accents, Buttons, Badges & Glows
+     4. Pure White     (#FFFFFF) — Header, Content Cards, Partner Logos & Headings
    ========================================================================== */
 
-/* 1. Global Reset & Canvas */
+/* 1. Global Reset */
 html, body {
-  background-color: #071A2B !important;
-  color: #F8FAFC !important;
+  background-color: #F8FAFC !important;
+  color: #334155 !important;
   font-family: 'Muli', 'Segoe UI', Roboto, sans-serif !important;
 }
 
@@ -2107,36 +2103,13 @@ html, body {
 .sp-page-builder,
 .page-content,
 main#sp-component {
-  background-color: #071A2B !important;
+  background-color: #F8FAFC !important;
 }
 
-/* 2. Global Typography Rules */
-h1, h2, h3, h4, h5, h6,
-.sppb-title-heading,
-.sp-page-builder h2,
-.sp-page-builder h3 {
-  color: #FFFFFF !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.2px !important;
-}
-
-p, span, li,
-.sppb-title-subheading {
-  color: #F8FAFC !important;
-}
-
-a {
-  color: #14B8A6;
-  transition: all 0.25s ease;
-}
-a:hover {
-  color: #5eead4;
-}
-
-/* 3. Top Utility Bar */
+/* 2. Top Utility Bar: Deep Navy Blue (#071A2B) */
 .header-top2 {
-  background-color: #04101D !important;
-  border-bottom: 1px solid rgba(20, 184, 166, 0.18) !important;
+  background-color: #071A2B !important;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.25) !important;
   min-height: 40px !important;
 }
 .header-top2 .sp-contact-info li,
@@ -2156,28 +2129,27 @@ a:hover {
   color: #14B8A6 !important;
 }
 
-/* 4. Main Header & Navigation */
+/* 3. Main Header Navigation: Pure White (#FFFFFF) */
 #header,
 .header-style2 .header-bottom,
 #sp-header {
-  background-color: #071A2B !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  transition: background 0.3s ease, box-shadow 0.3s ease !important;
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 2px 15px rgba(7, 26, 43, 0.06) !important;
+  transition: all 0.3s ease !important;
 }
 
 #sp-header.header-sticky {
-  background-color: rgba(7, 26, 43, 0.96) !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(14px) !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45) !important;
+  box-shadow: 0 4px 20px rgba(7, 26, 43, 0.1) !important;
 }
 
-/* Clean White Badge for School Crest & Logo */
 .header-style2 .header-bottom .header-logo .logo,
 #sp-header .logo {
-  background-color: #FFFFFF !important;
-  padding: 8px 24px !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 10px 0 !important;
   display: inline-flex !important;
   align-items: center !important;
 }
@@ -2187,11 +2159,11 @@ a:hover {
   width: auto !important;
 }
 
-/* Navigation Links */
+/* Navigation Links: Deep Navy Blue with Teal Hover */
 .sp-megamenu-parent > li > a,
 .sp-megamenu-parent > li > span {
-  color: #FFFFFF !important;
-  font-weight: 600 !important;
+  color: #071A2B !important;
+  font-weight: 700 !important;
   font-size: 14.5px !important;
   padding: 0 16px !important;
   line-height: 80px !important;
@@ -2199,89 +2171,71 @@ a:hover {
 }
 .sp-megamenu-parent > li:hover > a,
 .sp-megamenu-parent > li.active > a {
-  color: #14B8A6 !important;
+  color: #0F766E !important;
 }
 
-/* Megamenu Dropdowns */
+/* Dropdown Menus */
 .sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.25) !important;
+  background: #FFFFFF !important;
+  border: 1px solid #e2e8f0 !important;
   border-radius: 10px !important;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
+  box-shadow: 0 12px 35px rgba(7, 26, 43, 0.12) !important;
   padding: 12px 0 !important;
 }
 .sp-megamenu-parent .sp-dropdown li a {
-  color: #F8FAFC !important;
+  color: #071A2B !important;
   font-size: 13.5px !important;
+  font-weight: 600 !important;
   padding: 9px 20px !important;
   transition: all 0.2s ease !important;
 }
 .sp-megamenu-parent .sp-dropdown li:hover a {
-  color: #14B8A6 !important;
-  background: rgba(20, 184, 166, 0.1) !important;
+  color: #0F766E !important;
+  background: #F8FAFC !important;
   padding-left: 24px !important;
 }
 
-/* 5. Hero Slider Area */
-.hero-slider-wrap {
-  background-color: #071A2B !important;
-}
-.hero-dot {
-  background: rgba(248, 250, 252, 0.35) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-.hero-dot.active {
-  background: #14B8A6 !important;
-  width: 26px !important;
-  border-radius: 6px !important;
-  box-shadow: 0 0 12px rgba(20, 184, 166, 0.6) !important;
-}
-.hero-nav-btn {
-  background: rgba(11, 37, 61, 0.8) !important;
-  color: #14B8A6 !important;
-  border: 1px solid rgba(20, 184, 166, 0.35) !important;
-  backdrop-filter: blur(6px) !important;
-}
-.hero-nav-btn:hover {
-  background: #14B8A6 !important;
-  color: #FFFFFF !important;
-}
-
-/* 6. Section: Programme Details & Dual Specialization (#sp-find-course, #sp-main-body) */
+/* 4. Section: Programme Details & Dual Specialization (#sp-find-course, #sp-main-body)
+      Canvas: Off-White (#F8FAFC) */
 #sp-find-course,
 #sp-main-body,
 .sp-find-course {
-  background: radial-gradient(circle at 18% 40%, #0D2C47 0%, #071A2B 70%) !important;
-  background-color: #071A2B !important;
+  background: #F8FAFC !important;
+  background-color: #F8FAFC !important;
   padding: 65px 0 !important;
-  border-bottom: 1px solid rgba(20, 184, 166, 0.12) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
 }
 #sp-find-course h4,
 #sp-main-body h4 {
-  color: #FFFFFF !important;
-  font-size: 22px !important;
-  font-weight: 700 !important;
+  color: #071A2B !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
   margin-bottom: 14px !important;
+  letter-spacing: -0.2px !important;
 }
 #sp-find-course p,
 #sp-main-body p {
-  color: #F8FAFC !important;
-  line-height: 1.75 !important;
-  font-size: 15px !important;
+  color: #334155 !important;
+  line-height: 1.8 !important;
+  font-size: 15.5px !important;
+}
+#sp-find-course li,
+#sp-main-body li {
+  color: #334155 !important;
 }
 
-/* Dual Specialization Card: Modern Premium Navy + Teal Accent */
+/* Dual Specialization Card: Anchor Card in Deep Navy Blue (#071A2B) */
 #column-id-1562056026521,
 .custombanner-btm,
 .custombanner-btm .sp-position2,
 .sp-position2.sj-k2-filter,
 .sp-position2.sj-k2-filter.vertical-layout {
-  background: #0B253D !important;
-  background-color: #0B253D !important;
+  background: #071A2B !important;
+  background-color: #071A2B !important;
   background-image: none !important;
-  border: 1px solid rgba(20, 184, 166, 0.32) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45), 0 0 25px rgba(20, 184, 166, 0.1) !important;
+  border: 1px solid rgba(15, 118, 110, 0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 16px 45px rgba(7, 26, 43, 0.28) !important;
   overflow: hidden !important;
 }
 .custombanner-btm h3.block-subtitle {
@@ -2294,7 +2248,7 @@ a:hover {
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
 }
 .custombanner-btm h3.block-subtitle i.fa {
   font-size: 22px !important;
@@ -2315,10 +2269,11 @@ a:hover {
   color: #14B8A6 !important;
 }
 
-/* 7. Top Recruiters Section */
+/* 5. Section: Top Recruiters
+      Canvas: Deep Navy Blue (#071A2B) */
 #section-id-1562059641286.top-recruiters-section {
   position: relative !important;
-  background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 60%, #04101D 100%) !important;
+  background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 65%, #04101D 100%) !important;
   background-color: #071A2B !important;
   padding: 70px 0 75px !important;
   overflow: hidden !important;
@@ -2327,7 +2282,7 @@ a:hover {
 }
 #section-id-1562059641286 h2 {
   color: #FFFFFF !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   font-size: 32px !important;
   margin-bottom: 8px !important;
   letter-spacing: 0.3px !important;
@@ -2366,74 +2321,88 @@ a:hover {
   display: block !important;
 }
 
-/* 8. Upcoming Events Section */
+/* 6. Section: Upcoming Events
+      Canvas: Off-White (#F8FAFC) */
 #upcoming-event {
-  background: linear-gradient(180deg, #071A2B 0%, #04101D 100%) !important;
-  background-color: #071A2B !important;
+  background: #F8FAFC !important;
+  background-color: #F8FAFC !important;
   padding: 70px 0 !important;
-  border-bottom: 1px solid rgba(20, 184, 166, 0.12) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
 }
 #upcoming-event .sppb-title-heading {
-  color: #FFFFFF !important;
+  color: #071A2B !important;
   font-size: 32px !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
 }
 #upcoming-event .sppb-title-subheading {
-  color: #F8FAFC !important;
+  color: #64748b !important;
   font-size: 16px !important;
 }
 #upcoming-event .meganew-item-inner {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.22) !important;
-  border-radius: 10px !important;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+  background: #FFFFFF !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 22px rgba(7, 26, 43, 0.06) !important;
   overflow: hidden !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+#upcoming-event .meganew-item-inner:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 35px rgba(7, 26, 43, 0.12) !important;
 }
 #upcoming-event .item-title h3 a {
-  color: #FFFFFF !important;
+  color: #071A2B !important;
   font-size: 18px !important;
   font-weight: 700 !important;
   transition: color 0.2s ease !important;
 }
 #upcoming-event .item-title h3 a:hover {
-  color: #14B8A6 !important;
+  color: #0F766E !important;
 }
 #upcoming-event .meta,
 #upcoming-event .meta p {
-  color: #CBD5E1 !important;
+  color: #64748b !important;
   font-size: 13.5px !important;
 }
 #upcoming-event .meta .item-created {
-  color: #14B8A6 !important;
+  color: #0F766E !important;
   font-weight: 700 !important;
+  background: rgba(15, 118, 110, 0.08) !important;
+  padding: 3px 8px !important;
+  border-radius: 4px !important;
 }
 #upcoming-event a.more {
-  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
+  background: #0F766E !important;
   color: #FFFFFF !important;
   border-radius: 4px !important;
   padding: 4px 12px !important;
   font-size: 12px !important;
   font-weight: 600 !important;
+  transition: background 0.2s ease !important;
+}
+#upcoming-event a.more:hover {
+  background: #14B8A6 !important;
 }
 
-/* 9. Campus Video Tour Area */
+/* 7. Section: Campus Tour & Free Courses Parallax
+      Canvas: Deep Navy Blue (#071A2B) */
 #video-tour-area {
   background: #071A2B !important;
-  padding: 65px 0 !important;
+  padding: 70px 0 !important;
+  color: #FFFFFF !important;
 }
 #video-tour-area h2.title {
   color: #FFFFFF !important;
-  font-size: 30px !important;
-  font-weight: 700 !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
   margin-bottom: 18px !important;
 }
 #video-tour-area p {
   color: #F8FAFC !important;
-  font-size: 15px !important;
-  line-height: 1.7 !important;
+  font-size: 15.5px !important;
+  line-height: 1.8 !important;
 }
 
-/* 10. Courses Free Parallax Counters */
 #courses-free {
   position: relative !important;
   color: #FFFFFF !important;
@@ -2442,7 +2411,7 @@ a:hover {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(7, 26, 43, 0.88) !important;
+  background: rgba(7, 26, 43, 0.9) !important;
   z-index: 1;
 }
 #courses-free .sppb-container-inner {
@@ -2451,13 +2420,17 @@ a:hover {
 }
 #courses-free h2.title {
   color: #FFFFFF !important;
-  font-size: 30px !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+}
+#courses-free p {
+  color: #F8FAFC !important;
 }
 #courses-free .box-courses {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.25) !important;
-  border-radius: 8px !important;
-  padding: 16px 20px !important;
+  background: rgba(11, 37, 61, 0.9) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 18px 22px !important;
   margin-bottom: 15px !important;
 }
 #courses-free .box-courses h3 {
@@ -2466,15 +2439,16 @@ a:hover {
 }
 #courses-free .yt-counter-number {
   color: #14B8A6 !important;
-  font-size: 28px !important;
-  font-weight: 700 !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
 }
 
-/* 11. Accreditations and Associations Section */
+/* 8. Section: Accreditations and Associations
+      Canvas: Deep Navy Blue (#071A2B) */
 .accred-section-wrap {
-  background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 60%, #04101D 100%) !important;
+  background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 65%, #04101D 100%) !important;
   background-color: #071A2B !important;
-  padding: 65px 0 75px !important;
+  padding: 70px 0 75px !important;
   position: relative !important;
   overflow: hidden !important;
   border-top: 1px solid rgba(20, 184, 166, 0.15) !important;
@@ -2483,8 +2457,8 @@ a:hover {
 .accred-title {
   color: #FFFFFF !important;
   font-size: 28px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.2px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
 }
 .accred-card {
   background: #FFFFFF !important;
@@ -2512,64 +2486,66 @@ a:hover {
   box-shadow: 0 6px 16px rgba(20, 184, 166, 0.5) !important;
 }
 
-/* 12. Student Testimonials Section */
+/* 9. Section: Student Testimonials
+      Canvas: Off-White (#F8FAFC) */
 #testimonial-area {
-  background: linear-gradient(180deg, #071A2B 0%, #04101D 100%) !important;
-  background-color: #071A2B !important;
+  background: #F8FAFC !important;
+  background-color: #F8FAFC !important;
   padding: 70px 0 !important;
-  border-bottom: 1px solid rgba(20, 184, 166, 0.12) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
 }
 #testimonial-area h2 {
-  color: #FFFFFF !important;
+  color: #071A2B !important;
   font-size: 32px !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
 }
 #testimonial-area p {
-  color: #F8FAFC !important;
+  color: #64748b !important;
 }
 .custom-testimonial-box {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.28) !important;
+  background: #FFFFFF !important;
+  border: 1px solid #e2e8f0 !important;
   border-radius: 16px !important;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45) !important;
-  padding: 35px 30px !important;
+  box-shadow: 0 12px 40px rgba(7, 26, 43, 0.08) !important;
+  padding: 40px 35px !important;
 }
 .t-name {
-  color: #FFFFFF !important;
-  font-size: 18px !important;
+  color: #071A2B !important;
+  font-size: 19px !important;
   font-weight: 700 !important;
 }
 .t-badge {
-  color: #14B8A6 !important;
-  background: rgba(20, 184, 166, 0.12) !important;
-  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  color: #0F766E !important;
+  background: rgba(15, 118, 110, 0.08) !important;
+  border: 1px solid rgba(15, 118, 110, 0.25) !important;
   border-radius: 20px !important;
   padding: 4px 14px !important;
   font-size: 12px !important;
   font-weight: 600 !important;
 }
 .t-text {
-  color: #F8FAFC !important;
-  font-size: 15px !important;
-  line-height: 1.7 !important;
+  color: #334155 !important;
+  font-size: 15.5px !important;
+  line-height: 1.8 !important;
 }
 .t-btn {
   background: #0F766E !important;
   color: #FFFFFF !important;
-  border: 1px solid #14B8A6 !important;
+  border: 1px solid #0F766E !important;
 }
 .t-btn:hover {
   background: #14B8A6 !important;
   color: #FFFFFF !important;
 }
 
-/* 13. Blog Section */
+/* 10. Section: Blog Area (#blog-area)
+       Canvas: Off-White (#F8FAFC) */
 #blog-area {
-  background-color: #071A2B !important;
+  background-color: #F8FAFC !important;
   padding: 60px 0 !important;
 }
 
-/* 14. Modern Premium Action Buttons across ALL Sections */
+/* 11. Action Buttons: Teal (#0F766E / #14B8A6) across ALL Sections */
 .btn-readmore,
 .btn-join,
 .btn-primary,
@@ -2606,15 +2582,15 @@ button.btn-primary:hover,
   box-shadow: 0 8px 24px rgba(20, 184, 166, 0.5) !important;
 }
 
-/* 15. Footer: Modern Premium Deep Navy + Teal Accents */
+/* 12. Footer: Deep Navy Blue (#071A2B) */
 footer#sp-footer.sp-footer-custom {
   position: relative !important;
-  background: #04101D !important;
-  background-color: #04101D !important;
+  background: #071A2B !important;
+  background-color: #071A2B !important;
   color: #F8FAFC !important;
-  padding: 65px 0 25px !important;
-  border-top: 2px solid #14B8A6 !important;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35) !important;
+  padding: 70px 0 25px !important;
+  border-top: 3px solid #0F766E !important;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3) !important;
 }
 .footer-col-title {
   color: #FFFFFF !important;
@@ -2663,25 +2639,21 @@ footer#sp-footer.sp-footer-custom {
   box-shadow: 0 6px 18px rgba(20, 184, 166, 0.45) !important;
 }
 .live-counter-num {
-  background: #071A2B !important;
+  background: #04101D !important;
   border-color: #14B8A6 !important;
   color: #14B8A6 !important;
   font-weight: 700 !important;
 }
 
-/* 16. Admissions Chatbot Modern Premium Theme */
+/* 13. Admissions Chatbot */
 #dsbs-chatbot-trigger {
   background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
   box-shadow: 0 6px 25px rgba(20, 184, 166, 0.45) !important;
 }
-#dsbs-chatbot-trigger:hover {
-  transform: scale(1.08) rotate(5deg) !important;
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.6) !important;
-}
 #dsbs-chat-window {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.3) !important;
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55) !important;
+  background: #FFFFFF !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 16px 50px rgba(7, 26, 43, 0.25) !important;
 }
 .chat-head {
   background: #071A2B !important;
@@ -2697,48 +2669,49 @@ footer#sp-footer.sp-footer-custom {
   background: #14B8A6 !important;
 }
 .chat-messages {
-  background: #051320 !important;
+  background: #F8FAFC !important;
 }
 .msg.bot {
-  background: #0B253D !important;
-  color: #F8FAFC !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: #FFFFFF !important;
+  color: #071A2B !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
 }
 .msg.user {
   background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
   color: #FFFFFF !important;
 }
 .quick-reply-btn {
-  background: rgba(20, 184, 166, 0.12) !important;
-  border: 1px solid #14B8A6 !important;
-  color: #14B8A6 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #0F766E !important;
+  color: #0F766E !important;
 }
 .quick-reply-btn:hover {
-  background: #14B8A6 !important;
+  background: #0F766E !important;
   color: #FFFFFF !important;
 }
 .chat-input-area {
-  background: #071A2B !important;
-  border-top: 1px solid rgba(20, 184, 166, 0.2) !important;
+  background: #FFFFFF !important;
+  border-top: 1px solid #e2e8f0 !important;
 }
 .chat-input-area input {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.25) !important;
-  color: #F8FAFC !important;
+  background: #F8FAFC !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #071A2B !important;
 }
 .chat-input-area input:focus {
-  border-color: #14B8A6 !important;
+  border-color: #0F766E !important;
 }
 .chat-input-area button {
   background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
   color: #FFFFFF !important;
 }
 
-/* 17. Quick Enquiry Drawer & Navigation Modal */
+/* 14. Quick Enquiry Drawer & Navigation Modal */
 #enquiry-drawer {
-  background: #0B253D !important;
-  border-left: 2px solid #14B8A6 !important;
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5) !important;
+  background: #FFFFFF !important;
+  border-left: 3px solid #0F766E !important;
+  box-shadow: -10px 0 40px rgba(7, 26, 43, 0.2) !important;
 }
 .drawer-header {
   background: #071A2B !important;
@@ -2747,28 +2720,33 @@ footer#sp-footer.sp-footer-custom {
 .drawer-header h3 {
   color: #FFFFFF !important;
 }
+.drawer-body {
+  background: #F8FAFC !important;
+}
 .drawer-body label {
-  color: #F8FAFC !important;
+  color: #071A2B !important;
+  font-weight: 700 !important;
 }
 .drawer-body input,
 .drawer-body select,
 .drawer-body textarea {
-  background: #071A2B !important;
-  border: 1px solid rgba(20, 184, 166, 0.3) !important;
-  color: #F8FAFC !important;
+  background: #FFFFFF !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #071A2B !important;
 }
 .drawer-body input:focus,
 .drawer-body select:focus,
 .drawer-body textarea:focus {
-  border-color: #14B8A6 !important;
-  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25) !important;
+  border-color: #0F766E !important;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.2) !important;
 }
 
 /* Content Modal for Scraped Navigation Pages */
 .content-modal-box {
-  background: #0B253D !important;
-  border: 1px solid rgba(20, 184, 166, 0.3) !important;
-  color: #F8FAFC !important;
+  background: #FFFFFF !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+  box-shadow: 0 20px 60px rgba(7, 26, 43, 0.2) !important;
 }
 .content-modal-header {
   background: #071A2B !important;
@@ -2778,13 +2756,13 @@ footer#sp-footer.sp-footer-custom {
   color: #FFFFFF !important;
 }
 .content-modal-body {
-  color: #F8FAFC !important;
+  color: #334155 !important;
 }
 .content-modal-body h4 {
-  color: #14B8A6 !important;
+  color: #071A2B !important;
 }
 .content-modal-body p {
-  color: #F8FAFC !important;
+  color: #334155 !important;
 }
 
 /* Sticky Social Tabs on Right Edge */
@@ -2795,6 +2773,7 @@ footer#sp-footer.sp-footer-custom {
   background: linear-gradient(135deg, #071A2B, #0F766E) !important;
 }
 </style>
+
 
 </head>
 <body class="site helix-ultimate com-sppagebuilder view-page layout-default task-none itemid-101 en-gb ltr sticky-header layout-fluid offcanvas-init offcanvs-position-right">
@@ -3081,7 +3060,7 @@ display:inline;
 </div></div>
 </div></div></div></div></div></div></div></div></section>
 
-<section class="sppb-section top-recruiters-section" id="section-id-1562059641286" style="padding: 70px 0 75px; background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 60%, #04101D 100%) !important;">
+<section class="sppb-section top-recruiters-section" id="section-id-1562059641286" style="padding: 70px 0 75px; background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 65%, #04101D 100%) !important;">
 <div class="sppb-row-container">
 <div class="sppb-section-title sppb-text-center" style="margin-bottom: 35px;">
 <h2 style="color: #ffffff !important; font-weight: 700; font-size: 32px; margin-bottom: 8px; letter-spacing: 0.3px; text-shadow: 0 2px 12px rgba(0,0,0,0.4);">Top Recruiters</h2>
@@ -3366,11 +3345,11 @@ upcoming education for student.</p>
 </div>
 </div>
 </div></div></div></div></div></div></div></div></div>
-<section class="sppb-section" id="testimonial-area" style="padding: 70px 0; background: linear-gradient(180deg, #071A2B 0%, #04101D 100%) !important;">
+<section class="sppb-section" id="testimonial-area" style="padding: 70px 0; background: #F8FAFC !important;">
 <div class="sppb-row-container">
 <div class="sppb-section-title sppb-text-center" style="margin-bottom: 35px;">
-<h2 style="color: #FFFFFF !important; font-weight: 700; font-size: 32px; margin-bottom: 8px;">What Student Says</h2>
-<p style="color: #F8FAFC !important; font-size: 16px;">Real experiences and transformative journeys from our PGDM alumni and students.</p>
+<h2 style="color: #071A2B !important; font-weight: 800; font-size: 32px; margin-bottom: 8px;">What Student Says</h2>
+<p style="color: #64748b !important; font-size: 16px;">Real experiences and transformative journeys from our PGDM alumni and students.</p>
 </div>
 <div class="custom-testimonial-box">
 <!-- Slide 1 -->
