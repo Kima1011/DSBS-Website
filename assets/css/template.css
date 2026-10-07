@@ -856,8 +856,8 @@ table.category thead > tr th, table.category tbody > tr th, table.category thead
 .sp-scroll-up {
   display: none;
   position: fixed;
-  bottom: 100px;
-  right: 27px;
+  bottom: 95px;
+  right: 12px;
   width: 44px;
   height: 44px;
   line-height: 44px;

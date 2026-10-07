@@ -129,20 +129,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  // 6. Ensure DSBS Buddy Chatbot sits cleanly at bottom-right
+  // 6. Ensure DSBS Buddy Chatbot sits cleanly at bottom-right (close to edge)
   function alignDsbsChatbots() {
+    const isMobile = window.innerWidth <= 600;
+    const rightPos = isMobile ? '6px' : '8px';
+    const bottomPos = isMobile ? '12px' : '16px';
+    const indRight = isMobile ? '74px' : '81px';
+    const indBottom = isMobile ? '14px' : '18px';
+
     const eeIcon = document.getElementById('__eechatIcon') || document.querySelector('[id*="eechatIcon"]');
     if (eeIcon) {
       eeIcon.style.setProperty('position', 'fixed', 'important');
-      eeIcon.style.setProperty('right', '25px', 'important');
-      eeIcon.style.setProperty('bottom', '25px', 'important');
+      eeIcon.style.setProperty('right', rightPos, 'important');
+      eeIcon.style.setProperty('bottom', bottomPos, 'important');
       eeIcon.style.setProperty('z-index', '99992', 'important');
     }
     const indicator = document.querySelector('#eeChatIndicator .indicator') || document.querySelector('.indicator');
     if (indicator) {
       indicator.style.setProperty('position', 'fixed', 'important');
-      indicator.style.setProperty('right', '98px', 'important');
-      indicator.style.setProperty('bottom', '27px', 'important');
+      indicator.style.setProperty('right', indRight, 'important');
+      indicator.style.setProperty('bottom', indBottom, 'important');
       indicator.style.setProperty('z-index', '214483647', 'important');
     }
   }

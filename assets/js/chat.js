@@ -40,27 +40,35 @@ window.addEventListener("load", async function (event) {
       script.onload = function () {
         eeChatBot.init(clientInfo.clientAlias, clientInfo.clientId);
         
-        // Dynamically enforce clean bottom-right positioning for DSBS Buddy
+        // Dynamically enforce clean bottom-right positioning for DSBS Buddy (close to edge)
         function applyBotPosition() {
+          var isMobile = window.innerWidth <= 600;
+          var rightPos = isMobile ? '6px' : '8px';
+          var bottomPos = isMobile ? '12px' : '16px';
+          var indRight = isMobile ? '74px' : '81px';
+          var indBottom = isMobile ? '14px' : '18px';
+          var arrRight = isMobile ? '62px' : '69px';
+          var arrBottom = isMobile ? '38px' : '42px';
+
           var icon = document.getElementById("__eechatIcon");
           if (icon) {
             icon.style.setProperty('position', 'fixed', 'important');
-            icon.style.setProperty('right', '25px', 'important');
-            icon.style.setProperty('bottom', '25px', 'important');
+            icon.style.setProperty('right', rightPos, 'important');
+            icon.style.setProperty('bottom', bottomPos, 'important');
             icon.style.setProperty('z-index', '99992', 'important');
           }
           var indicator = document.querySelector("#eeChatIndicator .indicator") || document.querySelector(".indicator");
           if (indicator) {
             indicator.style.setProperty('position', 'fixed', 'important');
-            indicator.style.setProperty('right', '98px', 'important');
-            indicator.style.setProperty('bottom', '27px', 'important');
+            indicator.style.setProperty('right', indRight, 'important');
+            indicator.style.setProperty('bottom', indBottom, 'important');
             indicator.style.setProperty('z-index', '214483647', 'important');
           }
           var indicatorArrow = document.querySelector("#eeChatIndicator .indicator::after") || document.querySelector(".indicator::after");
           if (indicatorArrow) {
             indicatorArrow.style.setProperty('position', 'fixed', 'important');
-            indicatorArrow.style.setProperty('right', '86px', 'important');
-            indicatorArrow.style.setProperty('bottom', '51px', 'important');
+            indicatorArrow.style.setProperty('right', arrRight, 'important');
+            indicatorArrow.style.setProperty('bottom', arrBottom, 'important');
             indicatorArrow.style.setProperty('z-index', '214483647', 'important');
           }
         }
