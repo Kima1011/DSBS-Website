@@ -2456,6 +2456,38 @@ main#sp-component {
   transition: stroke 0.3s ease !important;
 }
 
+/* Application Status Card - Clickable Redirection to Application Channel */
+a.elite-metric-card.elite-application-status-card {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+a.elite-metric-card.elite-application-status-card:hover {
+  transform: translateY(-5px) !important;
+  background: #FFFFFF !important;
+  border-color: #166534 !important;
+  box-shadow: 0 14px 28px -4px rgba(22, 101, 52, 0.18), 0 6px 14px -2px rgba(146, 110, 47, 0.1) !important;
+}
+
+a.elite-metric-card.elite-application-status-card:hover::before {
+  background: #166534 !important;
+}
+
+a.elite-metric-card.elite-application-status-card:hover .elite-metric-label {
+  color: #166534 !important;
+}
+
+a.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
+  color: #15803d !important;
+  transform: scale(1.02);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
 /* 9. Section: Student Testimonials
       Canvas: Off-White (#F8FAFC) */
 #testimonial-area {
@@ -3432,11 +3464,11 @@ img#__eechatIcon {
           <p class="elite-metric-desc">Complete tuition with installment aid</p>
         </div>
 
-        <div class="elite-metric-card highlight">
-          <span class="elite-metric-label">Application Status</span>
+        <a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" class="elite-metric-card highlight elite-application-status-card" style="text-decoration: none; cursor: pointer;" title="Apply Now - Open 2027–29">
+          <span class="elite-metric-label">Application Status <i class="fa fa-external-link" style="margin-left: 4px; font-size: 0.72rem; opacity: 0.75;"></i></span>
           <div class="elite-metric-value" style="font-size: 1.25rem; color: #166534;">Open 2027–29</div>
           <p class="elite-metric-desc">Rolling admissions process</p>
-        </div>
+        </a>
       </div>
 
       <!-- Prominent Apply CTA Bar with Rolling Animation -->
