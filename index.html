@@ -2080,6 +2080,722 @@ footer#sp-footer.sp-footer-custom {
   display: block !important;
 }
 </style>
+
+<style id="dsbs-modern-premium-theme">
+/* ==========================================================================
+   MODERN PREMIUM COLOR PALETTE SYSTEM: NAVY + TEAL + WHITE
+   Palette Tokens:
+     #071A2B — Deep Navy (Dominant Canvas & Dark Sections)
+     #0B253D — Elevated Navy (Card Containers & Interactive Surfaces)
+     #04101D — Ultra Deep Navy (Header Top Bar & Footer)
+     #0F766E — Teal (Primary Interactive & Brand Accent)
+     #14B8A6 — Bright Teal (Electric Accent, Badges, Borders, Glowing Hover)
+     #F8FAFC — Off White (High-Legibility Body Text, Descriptions & Subtitles)
+     #FFFFFF — White (Crisp Titles, Pure Card Backdrops & High Contrast)
+   Visual Feel: Modern • Technology-focused • Clean • International
+   ========================================================================== */
+
+/* 1. Global Reset & Canvas */
+html, body {
+  background-color: #071A2B !important;
+  color: #F8FAFC !important;
+  font-family: 'Muli', 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.body-wrapper,
+.body-innerwrapper,
+.sp-page-builder,
+.page-content,
+main#sp-component {
+  background-color: #071A2B !important;
+}
+
+/* 2. Global Typography Rules */
+h1, h2, h3, h4, h5, h6,
+.sppb-title-heading,
+.sp-page-builder h2,
+.sp-page-builder h3 {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px !important;
+}
+
+p, span, li,
+.sppb-title-subheading {
+  color: #F8FAFC !important;
+}
+
+a {
+  color: #14B8A6;
+  transition: all 0.25s ease;
+}
+a:hover {
+  color: #5eead4;
+}
+
+/* 3. Top Utility Bar */
+.header-top2 {
+  background-color: #04101D !important;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.18) !important;
+  min-height: 40px !important;
+}
+.header-top2 .sp-contact-info li,
+.header-top2 .sp-contact-info li a {
+  color: #F8FAFC !important;
+  font-size: 13px !important;
+}
+.header-top2 .sp-contact-info li span.fa,
+.header-top2 .sp-contact-info li i.fa {
+  color: #14B8A6 !important;
+  margin-right: 6px !important;
+}
+.header-top2 .sp-module-content a {
+  color: #F8FAFC !important;
+}
+.header-top2 .sp-module-content a:hover {
+  color: #14B8A6 !important;
+}
+
+/* 4. Main Header & Navigation */
+#header,
+.header-style2 .header-bottom,
+#sp-header {
+  background-color: #071A2B !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: background 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+#sp-header.header-sticky {
+  background-color: rgba(7, 26, 43, 0.96) !important;
+  backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Clean White Badge for School Crest & Logo */
+.header-style2 .header-bottom .header-logo .logo,
+#sp-header .logo {
+  background-color: #FFFFFF !important;
+  padding: 8px 24px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.header-style2 .header-bottom .header-logo .logo img,
+#sp-header .logo img {
+  height: 52px !important;
+  width: auto !important;
+}
+
+/* Navigation Links */
+.sp-megamenu-parent > li > a,
+.sp-megamenu-parent > li > span {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  font-size: 14.5px !important;
+  padding: 0 16px !important;
+  line-height: 80px !important;
+  transition: color 0.2s ease !important;
+}
+.sp-megamenu-parent > li:hover > a,
+.sp-megamenu-parent > li.active > a {
+  color: #14B8A6 !important;
+}
+
+/* Megamenu Dropdowns */
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.25) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
+  padding: 12px 0 !important;
+}
+.sp-megamenu-parent .sp-dropdown li a {
+  color: #F8FAFC !important;
+  font-size: 13.5px !important;
+  padding: 9px 20px !important;
+  transition: all 0.2s ease !important;
+}
+.sp-megamenu-parent .sp-dropdown li:hover a {
+  color: #14B8A6 !important;
+  background: rgba(20, 184, 166, 0.1) !important;
+  padding-left: 24px !important;
+}
+
+/* 5. Hero Slider Area */
+.hero-slider-wrap {
+  background-color: #071A2B !important;
+}
+.hero-dot {
+  background: rgba(248, 250, 252, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.hero-dot.active {
+  background: #14B8A6 !important;
+  width: 26px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.6) !important;
+}
+.hero-nav-btn {
+  background: rgba(11, 37, 61, 0.8) !important;
+  color: #14B8A6 !important;
+  border: 1px solid rgba(20, 184, 166, 0.35) !important;
+  backdrop-filter: blur(6px) !important;
+}
+.hero-nav-btn:hover {
+  background: #14B8A6 !important;
+  color: #FFFFFF !important;
+}
+
+/* 6. Section: Programme Details & Dual Specialization (#sp-find-course, #sp-main-body) */
+#sp-find-course,
+#sp-main-body,
+.sp-find-course {
+  background: radial-gradient(circle at 18% 40%, #0D2C47 0%, #071A2B 70%) !important;
+  background-color: #071A2B !important;
+  padding: 65px 0 !important;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.12) !important;
+}
+#sp-find-course h4,
+#sp-main-body h4 {
+  color: #FFFFFF !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 14px !important;
+}
+#sp-find-course p,
+#sp-main-body p {
+  color: #F8FAFC !important;
+  line-height: 1.75 !important;
+  font-size: 15px !important;
+}
+
+/* Dual Specialization Card: Modern Premium Navy + Teal Accent */
+#column-id-1562056026521,
+.custombanner-btm,
+.custombanner-btm .sp-position2,
+.sp-position2.sj-k2-filter,
+.sp-position2.sj-k2-filter.vertical-layout {
+  background: #0B253D !important;
+  background-color: #0B253D !important;
+  background-image: none !important;
+  border: 1px solid rgba(20, 184, 166, 0.32) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45), 0 0 25px rgba(20, 184, 166, 0.1) !important;
+  overflow: hidden !important;
+}
+.custombanner-btm h3.block-subtitle {
+  color: #FFFFFF !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  padding: 22px 20px 16px 25px !important;
+  margin: 0 0 10px 0 !important;
+  border-bottom: 2px solid #14B8A6 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+.custombanner-btm h3.block-subtitle i.fa {
+  font-size: 22px !important;
+  color: #14B8A6 !important;
+}
+.custombanner-btm ul.menu {
+  color: #F8FAFC !important;
+  padding: 10px 20px 15px 48px !important;
+  line-height: 28px !important;
+}
+.custombanner-btm ul.menu li {
+  color: #F8FAFC !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-bottom: 4px !important;
+}
+.custombanner-btm ul.menu li::marker {
+  color: #14B8A6 !important;
+}
+
+/* 7. Top Recruiters Section */
+#section-id-1562059641286.top-recruiters-section {
+  position: relative !important;
+  background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 60%, #04101D 100%) !important;
+  background-color: #071A2B !important;
+  padding: 70px 0 75px !important;
+  overflow: hidden !important;
+  border-top: 1px solid rgba(20, 184, 166, 0.15) !important;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.15) !important;
+}
+#section-id-1562059641286 h2 {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  margin-bottom: 8px !important;
+  letter-spacing: 0.3px !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4) !important;
+}
+#section-id-1562059641286 p {
+  color: #F8FAFC !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3) !important;
+}
+.top-recruiters-section .recruiter-logo-item {
+  background: #FFFFFF !important;
+  padding: 14px 24px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 95px !important;
+  width: 195px !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  cursor: pointer !important;
+}
+.top-recruiters-section .recruiter-logo-item:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 12px 28px rgba(20, 184, 166, 0.35) !important;
+  border-color: #14B8A6 !important;
+}
+.top-recruiters-section .recruiter-logo-item img {
+  height: 60px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* 8. Upcoming Events Section */
+#upcoming-event {
+  background: linear-gradient(180deg, #071A2B 0%, #04101D 100%) !important;
+  background-color: #071A2B !important;
+  padding: 70px 0 !important;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.12) !important;
+}
+#upcoming-event .sppb-title-heading {
+  color: #FFFFFF !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+}
+#upcoming-event .sppb-title-subheading {
+  color: #F8FAFC !important;
+  font-size: 16px !important;
+}
+#upcoming-event .meganew-item-inner {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.22) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+  overflow: hidden !important;
+}
+#upcoming-event .item-title h3 a {
+  color: #FFFFFF !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  transition: color 0.2s ease !important;
+}
+#upcoming-event .item-title h3 a:hover {
+  color: #14B8A6 !important;
+}
+#upcoming-event .meta,
+#upcoming-event .meta p {
+  color: #CBD5E1 !important;
+  font-size: 13.5px !important;
+}
+#upcoming-event .meta .item-created {
+  color: #14B8A6 !important;
+  font-weight: 700 !important;
+}
+#upcoming-event a.more {
+  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 4px !important;
+  padding: 4px 12px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* 9. Campus Video Tour Area */
+#video-tour-area {
+  background: #071A2B !important;
+  padding: 65px 0 !important;
+}
+#video-tour-area h2.title {
+  color: #FFFFFF !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  margin-bottom: 18px !important;
+}
+#video-tour-area p {
+  color: #F8FAFC !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+/* 10. Courses Free Parallax Counters */
+#courses-free {
+  position: relative !important;
+  color: #FFFFFF !important;
+}
+#courses-free::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(7, 26, 43, 0.88) !important;
+  z-index: 1;
+}
+#courses-free .sppb-container-inner {
+  position: relative;
+  z-index: 2;
+}
+#courses-free h2.title {
+  color: #FFFFFF !important;
+  font-size: 30px !important;
+}
+#courses-free .box-courses {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.25) !important;
+  border-radius: 8px !important;
+  padding: 16px 20px !important;
+  margin-bottom: 15px !important;
+}
+#courses-free .box-courses h3 {
+  color: #FFFFFF !important;
+  font-size: 16px !important;
+}
+#courses-free .yt-counter-number {
+  color: #14B8A6 !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+}
+
+/* 11. Accreditations and Associations Section */
+.accred-section-wrap {
+  background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 60%, #04101D 100%) !important;
+  background-color: #071A2B !important;
+  padding: 65px 0 75px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-top: 1px solid rgba(20, 184, 166, 0.15) !important;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.15) !important;
+}
+.accred-title {
+  color: #FFFFFF !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px !important;
+}
+.accred-card {
+  background: #FFFFFF !important;
+  width: 275px !important;
+  height: 145px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.accred-card:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 12px 28px rgba(20, 184, 166, 0.35) !important;
+  border-color: #14B8A6 !important;
+}
+.accred-nav-btn {
+  background: #0F766E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #14B8A6 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+.accred-nav-btn:hover {
+  background: #14B8A6 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* 12. Student Testimonials Section */
+#testimonial-area {
+  background: linear-gradient(180deg, #071A2B 0%, #04101D 100%) !important;
+  background-color: #071A2B !important;
+  padding: 70px 0 !important;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.12) !important;
+}
+#testimonial-area h2 {
+  color: #FFFFFF !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+}
+#testimonial-area p {
+  color: #F8FAFC !important;
+}
+.custom-testimonial-box {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.28) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45) !important;
+  padding: 35px 30px !important;
+}
+.t-name {
+  color: #FFFFFF !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+.t-badge {
+  color: #14B8A6 !important;
+  background: rgba(20, 184, 166, 0.12) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  border-radius: 20px !important;
+  padding: 4px 14px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+.t-text {
+  color: #F8FAFC !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+.t-btn {
+  background: #0F766E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #14B8A6 !important;
+}
+.t-btn:hover {
+  background: #14B8A6 !important;
+  color: #FFFFFF !important;
+}
+
+/* 13. Blog Section */
+#blog-area {
+  background-color: #071A2B !important;
+  padding: 60px 0 !important;
+}
+
+/* 14. Modern Premium Action Buttons across ALL Sections */
+.btn-readmore,
+.btn-join,
+.btn-primary,
+.btn-submit,
+.box-submit a,
+a.btn-readmore,
+button.btn-primary,
+.content a.btn-join {
+  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
+  background-color: #0F766E !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 11px 32px !important;
+  box-shadow: 0 4px 16px rgba(20, 184, 166, 0.35) !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease !important;
+  cursor: pointer !important;
+  text-align: center !important;
+}
+.btn-readmore:hover,
+.btn-join:hover,
+.btn-primary:hover,
+.btn-submit:hover,
+.box-submit a:hover,
+a.btn-readmore:hover,
+button.btn-primary:hover,
+.content a.btn-join:hover {
+  background: linear-gradient(135deg, #14B8A6 0%, #0F766E 100%) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* 15. Footer: Modern Premium Deep Navy + Teal Accents */
+footer#sp-footer.sp-footer-custom {
+  position: relative !important;
+  background: #04101D !important;
+  background-color: #04101D !important;
+  color: #F8FAFC !important;
+  padding: 65px 0 25px !important;
+  border-top: 2px solid #14B8A6 !important;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+.footer-col-title {
+  color: #FFFFFF !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  margin-bottom: 22px !important;
+  border-bottom: 2px solid #14B8A6 !important;
+  display: inline-block !important;
+  padding-bottom: 6px !important;
+}
+.footer-link-list li a {
+  color: #F8FAFC !important;
+  font-size: 13.5px !important;
+  transition: all 0.2s ease !important;
+}
+.footer-link-list li a:hover {
+  color: #14B8A6 !important;
+  padding-left: 6px !important;
+}
+.footer-link-list li a i {
+  color: #14B8A6 !important;
+}
+.footer-info-block .info-label {
+  color: #14B8A6 !important;
+  font-weight: 700 !important;
+}
+.footer-info-block .info-val,
+.footer-info-block .info-val a {
+  color: #F8FAFC !important;
+  transition: color 0.2s ease !important;
+}
+.footer-info-block .info-val a:hover {
+  color: #14B8A6 !important;
+}
+.footer-social-row a {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.35) !important;
+  color: #14B8A6 !important;
+  border-radius: 50% !important;
+  transition: all 0.25s ease !important;
+}
+.footer-social-row a:hover {
+  background: #14B8A6 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-3px) scale(1.1) !important;
+  box-shadow: 0 6px 18px rgba(20, 184, 166, 0.45) !important;
+}
+.live-counter-num {
+  background: #071A2B !important;
+  border-color: #14B8A6 !important;
+  color: #14B8A6 !important;
+  font-weight: 700 !important;
+}
+
+/* 16. Admissions Chatbot Modern Premium Theme */
+#dsbs-chatbot-trigger {
+  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
+  box-shadow: 0 6px 25px rgba(20, 184, 166, 0.45) !important;
+}
+#dsbs-chatbot-trigger:hover {
+  transform: scale(1.08) rotate(5deg) !important;
+  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.6) !important;
+}
+#dsbs-chat-window {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55) !important;
+}
+.chat-head {
+  background: #071A2B !important;
+  border-bottom: 2px solid #14B8A6 !important;
+}
+.chat-head-text h4 {
+  color: #FFFFFF !important;
+}
+.chat-head-text span {
+  color: #14B8A6 !important;
+}
+.chat-head-text span::before {
+  background: #14B8A6 !important;
+}
+.chat-messages {
+  background: #051320 !important;
+}
+.msg.bot {
+  background: #0B253D !important;
+  color: #F8FAFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.msg.user {
+  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
+  color: #FFFFFF !important;
+}
+.quick-reply-btn {
+  background: rgba(20, 184, 166, 0.12) !important;
+  border: 1px solid #14B8A6 !important;
+  color: #14B8A6 !important;
+}
+.quick-reply-btn:hover {
+  background: #14B8A6 !important;
+  color: #FFFFFF !important;
+}
+.chat-input-area {
+  background: #071A2B !important;
+  border-top: 1px solid rgba(20, 184, 166, 0.2) !important;
+}
+.chat-input-area input {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.25) !important;
+  color: #F8FAFC !important;
+}
+.chat-input-area input:focus {
+  border-color: #14B8A6 !important;
+}
+.chat-input-area button {
+  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
+  color: #FFFFFF !important;
+}
+
+/* 17. Quick Enquiry Drawer & Navigation Modal */
+#enquiry-drawer {
+  background: #0B253D !important;
+  border-left: 2px solid #14B8A6 !important;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5) !important;
+}
+.drawer-header {
+  background: #071A2B !important;
+  border-bottom: 2px solid #14B8A6 !important;
+}
+.drawer-header h3 {
+  color: #FFFFFF !important;
+}
+.drawer-body label {
+  color: #F8FAFC !important;
+}
+.drawer-body input,
+.drawer-body select,
+.drawer-body textarea {
+  background: #071A2B !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  color: #F8FAFC !important;
+}
+.drawer-body input:focus,
+.drawer-body select:focus,
+.drawer-body textarea:focus {
+  border-color: #14B8A6 !important;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25) !important;
+}
+
+/* Content Modal for Scraped Navigation Pages */
+.content-modal-box {
+  background: #0B253D !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  color: #F8FAFC !important;
+}
+.content-modal-header {
+  background: #071A2B !important;
+  border-bottom: 2px solid #14B8A6 !important;
+}
+.content-modal-header h3 {
+  color: #FFFFFF !important;
+}
+.content-modal-body {
+  color: #F8FAFC !important;
+}
+.content-modal-body h4 {
+  color: #14B8A6 !important;
+}
+.content-modal-body p {
+  color: #F8FAFC !important;
+}
+
+/* Sticky Social Tabs on Right Edge */
+.sticky-social .sub-social-icons.phone {
+  background: linear-gradient(135deg, #0F766E, #14B8A6) !important;
+}
+.sticky-social .sub-social-icons.social-group {
+  background: linear-gradient(135deg, #071A2B, #0F766E) !important;
+}
+</style>
+
 </head>
 <body class="site helix-ultimate com-sppagebuilder view-page layout-default task-none itemid-101 en-gb ltr sticky-header layout-fluid offcanvas-init offcanvs-position-right">
 <div class="body-wrapper">
@@ -2365,7 +3081,7 @@ display:inline;
 </div></div>
 </div></div></div></div></div></div></div></div></section>
 
-<section class="sppb-section top-recruiters-section" id="section-id-1562059641286" style="padding: 65px 0 70px; background: radial-gradient(ellipse at 50% 15%, #353f6e 0%, #272f54 55%, #181f3b 100%) !important;">
+<section class="sppb-section top-recruiters-section" id="section-id-1562059641286" style="padding: 70px 0 75px; background: radial-gradient(ellipse at 50% 20%, #0D2C47 0%, #071A2B 60%, #04101D 100%) !important;">
 <div class="sppb-row-container">
 <div class="sppb-section-title sppb-text-center" style="margin-bottom: 35px;">
 <h2 style="color: #ffffff !important; font-weight: 700; font-size: 32px; margin-bottom: 8px; letter-spacing: 0.3px; text-shadow: 0 2px 12px rgba(0,0,0,0.4);">Top Recruiters</h2>
@@ -2650,11 +3366,11 @@ upcoming education for student.</p>
 </div>
 </div>
 </div></div></div></div></div></div></div></div></div>
-<section class="sppb-section" id="testimonial-area" style="padding: 60px 0; background: #f8fafc;">
+<section class="sppb-section" id="testimonial-area" style="padding: 70px 0; background: linear-gradient(180deg, #071A2B 0%, #04101D 100%) !important;">
 <div class="sppb-row-container">
 <div class="sppb-section-title sppb-text-center" style="margin-bottom: 35px;">
-<h2 style="color: #3e4095; font-weight: 700; font-size: 32px; margin-bottom: 8px;">What Student Says</h2>
-<p style="color: #64748b; font-size: 16px;">Real experiences and transformative journeys from our PGDM alumni and students.</p>
+<h2 style="color: #FFFFFF !important; font-weight: 700; font-size: 32px; margin-bottom: 8px;">What Student Says</h2>
+<p style="color: #F8FAFC !important; font-size: 16px;">Real experiences and transformative journeys from our PGDM alumni and students.</p>
 </div>
 <div class="custom-testimonial-box">
 <!-- Slide 1 -->
@@ -12701,7 +13417,7 @@ function respondToTopic(query) {
   if (q.includes('about') || q.includes('program') || q.includes('pgdm')) {
     appendBotMessage('<strong>About Admin Business School PGDM:</strong><br>Admin Business School offers an approved 2-Year Full-Time Post Graduate Diploma in Management (PGDM) with Dual Specialization.<br><br>✨ <strong>Specializations:</strong><br>• Marketing<br>• Financial Management<br>• Human Resource Management<br>• Business Analytics<br>• Supply Chain & Operations<br><br>Students benefit from global immersion, live corporate internships, and mentoring by IIM faculty and industry leaders.');
   } else if (q.includes('eligib') || q.includes('criteria') || q.includes('admission')) {
-    appendBotMessage('<strong>Eligibility Criteria for Admissions:</strong><br>• Bachelor’s Degree in any discipline from a recognized University with minimum 50% aggregate (45% for SC/ST).<br>• Valid score in any National Management Entrance Exam: CAT, MAT, XAT, CMAT, ATMA, or GMAT.<br>• Performance in Personal Interview & Micro Presentation.<br><br><button onclick="openEnquiryDrawer()" style="background:#3e4095;color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:600;margin-top:5px;">Apply Online Now</button>');
+    appendBotMessage('<strong>Eligibility Criteria for Admissions:</strong><br>• Bachelor’s Degree in any discipline from a recognized University with minimum 50% aggregate (45% for SC/ST).<br>• Valid score in any National Management Entrance Exam: CAT, MAT, XAT, CMAT, ATMA, or GMAT.<br>• Performance in Personal Interview & Micro Presentation.<br><br><button onclick="openEnquiryDrawer()" style="background:linear-gradient(135deg, #0F766E, #14B8A6);color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:600;;font-weight:600;margin-top:5px;">Apply Online Now</button>');
   } else if (q.includes('place') || q.includes('salary') || q.includes('pack')) {
     appendBotMessage('<strong>Placement Highlights:</strong><br>• 100% Placement Support & Dedicated Placement Cell.<br>• <strong>Highest CTC:</strong> ₹14.0 LPA.<br>• <strong>Average CTC:</strong> ₹7.5 LPA.<br>• Over 200+ top recruiting partners across IT, BFSI, FMCG, and Consulting.');
   } else if (q.includes('recruit') || q.includes('company') || q.includes('companies')) {
@@ -12714,7 +13430,7 @@ function respondToTopic(query) {
     openEnquiryDrawer();
     appendBotMessage('I have opened the online application form for you on the right side. Please fill in your basic details to proceed!');
   } else {
-    appendBotMessage('Thank you for your question about <em>"' + query + '"</em>. Admin Business School offers comprehensive PGDM programs with dual specializations. Would you like to connect directly with an Admissions Counselor?<br><br><button onclick="openEnquiryDrawer()" style="background:#3e4095;color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:600;">Contact Admissions</button>');
+    appendBotMessage('Thank you for your question about <em>"' + query + '"</em>. Admin Business School offers comprehensive PGDM programs with dual specializations. Would you like to connect directly with an Admissions Counselor?<br><br><button onclick="openEnquiryDrawer()" style="background:linear-gradient(135deg, #0F766E, #14B8A6);color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:600;;font-weight:600;">Contact Admissions</button>');
   }
 }
 
@@ -12770,7 +13486,7 @@ function loadFacultyList() {
             '<img src="' + img + '" alt="' + f.name + '" onerror="this.src=\'images/dsblogo-1.png\'">' +
             '<h5>' + f.name + '</h5>' +
             '<p><strong>' + f.designation + '</strong></p>' +
-            (f.email ? '<p style="color:#3e4095; font-size:11px; margin-top:4px;"><i class="fa fa-envelope"></i> ' + f.email + '</p>' : '') +
+            (f.email ? '<p style="color:#14B8A6; font-size:11px; margin-top:4px;"><i class="fa fa-envelope"></i> ' + f.email + '</p>' : '') +
             '</div>';
   });
   html += '</div>';
@@ -12786,8 +13502,8 @@ function loadPageData(slug, defaultTitle) {
   if (page) {
     var title = page.title || defaultTitle;
     var html = '<div>';
-    if (page.category) html += '<span style="color:#e60023; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:1px;">' + page.category + '</span>';
-    html += '<h3 style="color:#3e4095; margin-top:5px; margin-bottom:15px;">' + title + '</h3>';
+    if (page.category) html += '<span style="color:#14B8A6; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:1px;">' + page.category + '</span>';
+    html += '<h3 style="color:#FFFFFF; margin-top:5px; margin-bottom:15px;">' + title + '</h3>';
     
     if (page.sections && page.sections.length > 0) {
       page.sections.forEach(function(sec) {
@@ -12797,15 +13513,15 @@ function loadPageData(slug, defaultTitle) {
       });
     }
     html += '<div style="margin-top:25px; padding-top:15px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">' +
-            '<span style="font-size:12px; color:#64748b;">Source: dsbs.edu.in/' + slug + '</span>' +
-            '<button onclick="openEnquiryDrawer(\'' + title + '\')" style="background:#3e4095; color:#fff; border:none; padding:8px 16px; border-radius:4px; cursor:pointer; font-weight:600;">Enquire for Admission</button>' +
+            '<span style="font-size:12px; color:#14B8A6;">Source: dsbs.edu.in/' + slug + '</span>' +
+            '<button onclick="openEnquiryDrawer(\'' + title + '\')" style="background:linear-gradient(135deg, #0F766E, #14B8A6); color:#fff; font-weight:700; border:none; padding:8px 16px; border-radius:4px; cursor:pointer; font-weight:600;">Enquire for Admission</button>' +
             '</div>';
     html += '</div>';
     openContentModal(title, html);
   } else {
     // Fallback template
     var html = '<div style="padding:10px 0;">' +
-               '<h3 style="color:#3e4095; margin-bottom:15px;">' + defaultTitle + '</h3>' +
+               '<h3 style="color:#FFFFFF; margin-bottom:15px;">' + defaultTitle + '</h3>' +
                '<p>Admin Business School (Admin Business School) offers premier AICTE-approved 2-year full-time PGDM programs with dual specializations, world-class faculty, and 100% placement track record.</p>' +
                '<p>For detailed inquiries regarding ' + defaultTitle + ', please connect with our admissions desk.</p>' +
                '<div style="margin-top:20px;">' +
