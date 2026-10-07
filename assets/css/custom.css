@@ -162,17 +162,21 @@ p{
     font-weight: bold;
 }
 .btn-readmore{
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #272f54;
   color: #fff;
   height: 40px;
-  line-height: 40px;
+  line-height: 1;
   padding: 0 27px;
+  box-sizing: border-box;
   font-weight: 600;
   border-radius: 30px;
   border: 0;
   background-image: none;
   text-shadow: none;
+  vertical-align: middle;
 }
 #video-tour-area .custom.video-tour a.btn-join:hover, .btn-readmore:active, .btn-readmore:focus, .btn-readmore:hover {
   background-color: #a22531;
