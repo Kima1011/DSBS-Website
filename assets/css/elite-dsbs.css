@@ -1786,16 +1786,36 @@ ul, ol {
 }
 
 .accred-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 2.5rem auto !important;
+  width: 100% !important;
 }
 
 .accred-title {
-  color: #FFFFFF;
-  font-family: var(--font-serif);
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  color: #FFFFFF !important;
+  font-family: var(--font-serif) !important;
+  font-size: 2.25rem !important;
+  font-weight: 700 !important;
+  margin: 0 auto 0.5rem auto !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.accred-divider {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+.accred-divider img {
+  margin: 0 auto !important;
+  display: block !important;
 }
 
 .accred-slider-container {
