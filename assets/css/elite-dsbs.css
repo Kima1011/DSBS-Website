@@ -1997,9 +1997,9 @@ ul, ol {
 
 .footer-grid-row {
   display: grid;
-  grid-template-columns: 1.35fr 0.95fr 1.15fr 1.15fr;
-  gap: 3rem;
-  margin-bottom: 4rem;
+  grid-template-columns: 1.25fr 1.35fr 1.15fr;
+  gap: 3.5rem;
+  margin-bottom: 2.75rem;
 }
 
 .footer-logo {
@@ -2145,6 +2145,74 @@ ul, ol {
   color: #FFFFFF;
 }
 
+/* Horizontal Useful Links Bar */
+.footer-useful-links-horizontal {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.25rem 2.25rem;
+}
+
+.footer-useful-links-horizontal .useful-links-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--elite-gold);
+  margin: 0;
+  padding-right: 1.75rem;
+  border-right: 2px solid var(--elite-gold-border);
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.footer-links-horizontal-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.footer-links-horizontal-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links-horizontal-list li a {
+  color: #94A3B8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer-links-horizontal-list li a:hover {
+  color: var(--elite-gold);
+  transform: translateY(-1px);
+}
+
+.footer-links-horizontal-list li a i {
+  color: var(--elite-gold);
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-links-horizontal-list li a:hover i {
+  transform: translateX(2px);
+}
+
 .footer-copyright-row {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.75rem 0;
@@ -2201,6 +2269,21 @@ ul, ol {
   }
   .footer-grid-row {
     grid-template-columns: 1fr;
+  }
+  .footer-useful-links-horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+  .footer-useful-links-horizontal .useful-links-title {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 2px solid var(--elite-gold-border);
+    padding-bottom: 0.35rem;
+  }
+  .footer-links-horizontal-list {
+    gap: 0.65rem 1.25rem;
   }
 }
 
