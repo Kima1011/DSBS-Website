@@ -1477,7 +1477,6 @@ header.header.is-sticky {
     color: #fff;
 }
 </style>
-
 <style id="dsbs-footer-and-bg-enhancements">
 /* --- BACKGROUND PHOTOS ON WEBPAGE --- */
 
@@ -1784,6 +1783,149 @@ footer#sp-footer.sp-footer-custom {
     margin-bottom: 25px;
     padding: 0;
   }
+}
+</style>
+
+<style id="dsbs-accreditations-enhancements">
+/* --- ACCREDITATIONS AND ASSOCIATIONS SECTION (MATCHING SCREENSHOT) --- */
+.accred-section-wrap {
+  background: #19253d !important; /* Deep dark navy background from screenshot */
+  padding: 55px 0 65px !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.accred-header {
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.accred-title {
+  color: #ffffff !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  margin: 0 0 8px 0 !important;
+  font-family: 'Muli', 'Segoe UI', Roboto, sans-serif !important;
+  letter-spacing: 0.2px;
+}
+
+.accred-divider {
+  display: block;
+}
+
+.accred-divider img {
+  height: 14px;
+  width: auto;
+  filter: brightness(0) invert(1); /* Clean white flourish ornament */
+  opacity: 0.95;
+}
+
+.accred-slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.accred-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 8px 0;
+}
+
+.accred-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: accredSlideAnim 32s linear infinite;
+  align-items: center;
+}
+
+.accred-marquee-wrapper:hover .accred-track {
+  animation-play-state: paused;
+}
+
+@keyframes accredSlideAnim {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Card Styling: Solid white rectangular box */
+.accred-card {
+  background: #ffffff !important;
+  width: 275px;
+  height: 145px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.accred-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.38);
+}
+
+.accred-card img {
+  max-width: 100%;
+  max-height: 85px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation buttons */
+.accred-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.accred-nav-btn:hover {
+  background: #e60023;
+  border-color: #e60023;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.accred-prev { left: -16px; }
+.accred-next { right: -16px; }
+
+@media (max-width: 991px) {
+  .accred-card {
+    width: 240px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accred-card {
+    width: 210px;
+    height: 120px;
+    padding: 12px 18px;
+  }
+  .accred-card img {
+    max-height: 65px;
+  }
+  .accred-prev { left: 5px; }
+  .accred-next { right: 5px; }
 }
 </style>
 </head>
@@ -2201,30 +2343,111 @@ display:inline;
 </div>
 </div></div>
 </div></div></div></div></div></div></div></div></div>
-<section class="sppb-section" id="section-id-1660887461209" style="padding: 45px 0; background: #ffffff;">
-<div class="sppb-row-container">
-<div class="sppb-section-title sppb-text-center" style="margin-bottom: 25px;">
-<h2 style="color: #3e4095; font-weight: 700; font-size: 28px;">Accreditations and Associations</h2>
+
+<section class="sppb-section accred-section-wrap" id="section-id-1660887461209">
+<div class="container" style="max-width: 1240px; margin: 0 auto; padding: 0 15px;">
+<div class="accred-header">
+<h2 class="accred-title">Accreditations and Associations</h2>
+<div class="accred-divider">
+<img alt="divider" src="images/icontitlesmall-2.png"/>
 </div>
-<div class="recruiter-marquee">
-<div class="recruiter-track accreditations-track">
-<div class="recruiter-logo-item"><img alt="Accreditation 1" src="images/c1-250x150-f0b83978fc1ee1929f1de533ee368845.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="Ministry of Education" src="images/moe-250x150-d1ac71c9eeb12de3fece247b1d39ec63.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="IIC" src="images/iic-250x150-1f859c1edb6b94305b9358b1e05f10f6.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="Accreditation 4" src="images/c4-250x150-0b7e2347dfb181b9c3b18302af6d1058.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="Accreditation 3" src="images/c3-250x150-d7a232c1f0a9cd7e640416caa737e31b.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="Accreditation 7" src="images/c7-250x150-50d0edabdc66ea42d0a3dd760a67989c.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="HMC" src="images/hmc-250x150-582b7530e6ab9f4d6354e2838f310209.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="Calibr AI" src="images/calibr-250x150-e18acf0a091aed044a2c6998ce1ac17f.jpg"/></div>
-<!-- Duplicates -->
-<div class="recruiter-logo-item"><img alt="Accreditation 1" src="images/c1-250x150-f0b83978fc1ee1929f1de533ee368845.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="Ministry of Education" src="images/moe-250x150-d1ac71c9eeb12de3fece247b1d39ec63.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="IIC" src="images/iic-250x150-1f859c1edb6b94305b9358b1e05f10f6.jpg"/></div>
-<div class="recruiter-logo-item"><img alt="Accreditation 4" src="images/c4-250x150-0b7e2347dfb181b9c3b18302af6d1058.jpg"/></div>
 </div>
+<div class="accred-slider-container">
+<button class="accred-nav-btn accred-prev" onclick="scrollAccredTrack(-1)"><i class="fa fa-chevron-left"></i></button>
+<div class="accred-marquee-wrapper" id="accred-marquee-wrap">
+<div class="accred-track" id="accred-track">
+<!-- Card 1: Calibr (Matches screenshot) -->
+<div class="accred-card">
+<img alt="Calibr" src="images/calibr-250x150-e18acf0a091aed044a2c6998ce1ac17f.jpg"/>
+</div>
+<!-- Card 2: Crest/Lion (Matches screenshot) -->
+<div class="accred-card">
+<img alt="Accreditation Crest" src="images/c10-250x150-c31bffd53e4e7447925a3acc3a22294a.jpg"/>
+</div>
+<!-- Card 3: BankEdge (Matches screenshot) -->
+<div class="accred-card">
+<img alt="BankEdge" src="images/c8-250x150-27c24df1ddb3caf1608fa0c2614b064a.jpg"/>
+</div>
+<!-- Card 4: R World Institutional Ranking (Matches screenshot) -->
+<div class="accred-card">
+<img alt="R World Institutional Ranking" src="images/rwr-250x150-972d75bfea2945176b911cc939f175fc.jpg"/>
+</div>
+<!-- Card 5: C1 -->
+<div class="accred-card">
+<img alt="Accreditation" src="images/c1-250x150-f0b83978fc1ee1929f1de533ee368845.jpg"/>
+</div>
+<!-- Card 6: Ministry of Education -->
+<div class="accred-card">
+<img alt="Ministry of Education" src="images/moe-250x150-d1ac71c9eeb12de3fece247b1d39ec63.jpg"/>
+</div>
+<!-- Card 7: IIC -->
+<div class="accred-card">
+<img alt="IIC" src="images/iic-250x150-1f859c1edb6b94305b9358b1e05f10f6.jpg"/>
+</div>
+<!-- Card 8: C4 -->
+<div class="accred-card">
+<img alt="Accreditation" src="images/c4-250x150-0b7e2347dfb181b9c3b18302af6d1058.jpg"/>
+</div>
+<!-- Card 9: C3 -->
+<div class="accred-card">
+<img alt="Accreditation" src="images/c3-250x150-d7a232c1f0a9cd7e640416caa737e31b.jpg"/>
+</div>
+<!-- Card 10: C7 -->
+<div class="accred-card">
+<img alt="Accreditation" src="images/c7-250x150-50d0edabdc66ea42d0a3dd760a67989c.jpg"/>
+</div>
+<!-- Card 11: HMC -->
+<div class="accred-card">
+<img alt="HMC" src="images/hmc-250x150-582b7530e6ab9f4d6354e2838f310209.jpg"/>
+</div>
+<!-- Card 12: HMN -->
+<div class="accred-card">
+<img alt="HMN" src="images/hmn-250x150-798f5d3f671080ec810858e72b86082a.jpg"/>
+</div>
+<!-- Card 13: C11 -->
+<div class="accred-card">
+<img alt="Accreditation" src="images/c11-250x150-7965f8d17a0a5131eb17e31862e46bbf.jpg"/>
+</div>
+<!-- Card 14: C5 -->
+<div class="accred-card">
+<img alt="Accreditation" src="images/c5-250x150-7703550331bc5ed72b239931461773d3.jpg"/>
+</div>
+<!-- Card 15: PUSP -->
+<div class="accred-card">
+<img alt="PUSP" src="images/pusp-250x150-ba5d92eadc9b569f167f038934b0cdd6.jpg"/>
+</div>
+<!-- Duplicates for seamless infinite scrolling -->
+<div class="accred-card">
+<img alt="Calibr" src="images/calibr-250x150-e18acf0a091aed044a2c6998ce1ac17f.jpg"/>
+</div>
+<div class="accred-card">
+<img alt="Accreditation Crest" src="images/c10-250x150-c31bffd53e4e7447925a3acc3a22294a.jpg"/>
+</div>
+<div class="accred-card">
+<img alt="BankEdge" src="images/c8-250x150-27c24df1ddb3caf1608fa0c2614b064a.jpg"/>
+</div>
+<div class="accred-card">
+<img alt="R World Institutional Ranking" src="images/rwr-250x150-972d75bfea2945176b911cc939f175fc.jpg"/>
+</div>
+<div class="accred-card">
+<img alt="Accreditation" src="images/c1-250x150-f0b83978fc1ee1929f1de533ee368845.jpg"/>
+</div>
+<div class="accred-card">
+<img alt="Ministry of Education" src="images/moe-250x150-d1ac71c9eeb12de3fece247b1d39ec63.jpg"/>
+</div>
+<div class="accred-card">
+<img alt="IIC" src="images/iic-250x150-1f859c1edb6b94305b9358b1e05f10f6.jpg"/>
+</div>
+<div class="accred-card">
+<img alt="Accreditation" src="images/c4-250x150-0b7e2347dfb181b9c3b18302af6d1058.jpg"/>
+</div>
+</div>
+</div>
+<button class="accred-nav-btn accred-next" onclick="scrollAccredTrack(1)"><i class="fa fa-chevron-right"></i></button>
 </div>
 </div>
 </section>
+
 <div class="sppb-section" id="courses-free"><div class="sppb-container-inner"><div class="sppb-row"><div class="sppb-col-md-6"><div class="sppb-column" id="column-id-1562223643563"><div class="sppb-column-addons"><div class="clearfix" id="sppb-addon-1563265851444"><div class="sppb-addon sppb-addon-text-block 0"><div class="sppb-addon-content"><div class="parallax"> </div></div></div></div></div></div></div><div class="sppb-col-md-6"><div class="sppb-column" id="column-id-1562223643565"><div class="sppb-column-addons"><div class="clearfix" id="sppb-addon-1562225107639"><div class="sppb-addon sppb-addon-module"><div class="sppb-addon-content">
 <div class="custom video-tour">
 <h2 class="title">Get 60 Courses For Free</h2>
@@ -2418,7 +2641,7 @@ upcoming education for student.</p>
 </div>
 </div>
 </footer>
- </div>
+</div>
 </div>
 <!-- Off Canvas Menu -->
 <div class="offcanvas-overlay"></div>
@@ -12436,6 +12659,23 @@ function loadPageData(slug, defaultTitle) {
                '</div>' +
                '</div>';
     openContentModal(defaultTitle, html);
+  }
+}
+</script>
+
+<script>
+function scrollAccredTrack(direction) {
+  var track = document.getElementById('accred-track');
+  if (track) {
+    var style = window.getComputedStyle(track);
+    var matrix = new WebKitCSSMatrix(style.transform);
+    var currentX = matrix.m41;
+    var newX = currentX + (direction * -300);
+    track.style.transition = 'transform 0.4s ease';
+    track.style.transform = 'translateX(' + newX + 'px)';
+    setTimeout(function() {
+      track.style.transition = '';
+    }, 450);
   }
 }
 </script>
