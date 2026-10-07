@@ -827,21 +827,22 @@ header.header.is-sticky {
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
 
-/* Red Vertical Apply Now Tab - Positioned below Sticky Social icons */
+/* Red Vertical Apply Now Tab - Touching the Right Edge */
 .ee-register-now.right {
     position: fixed;
-    right: -25px;
-    top: calc(35vh + 245px);
-    z-index: 9997;
-    transform: rotate(270deg);
-    transform-origin: center center;
-    transition: all 0.3s ease;
+    right: 0 !important;
+    top: calc(35vh + 140px) !important;
+    z-index: 9999 !important;
+    transform: rotate(270deg) !important;
+    transform-origin: bottom right !important;
+    line-height: 0;
 }
 .applyNow-button {
     background: linear-gradient(135deg, #e60023, #c4001a) !important;
     color: #fff !important;
     font-weight: 700;
     font-size: 14px;
+    line-height: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 10px 22px;
@@ -849,13 +850,14 @@ header.header.is-sticky {
     border: none;
     cursor: pointer;
     box-shadow: 0 -4px 15px rgba(230, 0, 35, 0.4);
-    display: inline-block;
-    transition: all 0.3s ease;
+    display: block;
+    margin: 0;
+    transition: all 0.25s ease;
 }
 .applyNow-button:hover {
     background: linear-gradient(135deg, #3e4095, #26286b) !important;
-    box-shadow: 0 -4px 15px rgba(62, 64, 149, 0.5);
-    transform: translateY(-3px);
+    box-shadow: 0 -6px 20px rgba(62, 64, 149, 0.5);
+    transform: translateY(-4px);
 }
 
 /* Pull-Out Admission Enquiry Drawer */
