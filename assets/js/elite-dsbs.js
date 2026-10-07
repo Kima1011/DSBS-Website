@@ -128,4 +128,25 @@ document.addEventListener('DOMContentLoaded', function () {
       accredTrack.scrollBy({ left: dir * 300, behavior: 'smooth' });
     }
   };
+
+  // 6. Ensure DSBS Buddy Chatbot sits vertically above green Admissions Chatbot Trigger
+  function alignDsbsChatbots() {
+    const eeIcon = document.getElementById('__eechatIcon') || document.querySelector('[id*="eechatIcon"]');
+    if (eeIcon) {
+      eeIcon.style.setProperty('position', 'fixed', 'important');
+      eeIcon.style.setProperty('right', '25px', 'important');
+      eeIcon.style.setProperty('bottom', '102px', 'important');
+      eeIcon.style.setProperty('z-index', '99992', 'important');
+    }
+    const indicator = document.querySelector('#eeChatIndicator .indicator') || document.querySelector('.indicator');
+    if (indicator) {
+      indicator.style.setProperty('position', 'fixed', 'important');
+      indicator.style.setProperty('right', '98px', 'important');
+      indicator.style.setProperty('bottom', '104px', 'important');
+      indicator.style.setProperty('z-index', '214483647', 'important');
+    }
+  }
+  alignDsbsChatbots();
+  const chatbotObserver = new MutationObserver(alignDsbsChatbots);
+  chatbotObserver.observe(document.body, { childList: true, subtree: true });
 });

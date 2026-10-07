@@ -2800,36 +2800,104 @@ footer#sp-footer.sp-footer-custom {
   box-shadow: 0 6px 25px rgba(20, 184, 166, 0.45) !important;
 }
 
-/* ExtraaEdge DSBS Buddy repositioning beside green button to prevent overlap */
-#__eedivChatMain #__eechatIcon {
-  right: 102px !important;
-  bottom: 23px !important;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+/* ExtraaEdge DSBS Buddy repositioned vertically above green button to prevent overlap */
+#__eechatIcon,
+[id="__eechatIcon"],
+[id*="eechatIcon"],
+#__eedivChatMain #__eechatIcon,
+#eeChatContainer #__eechatIcon,
+div#__eechatIcon,
+img#__eechatIcon {
+  position: fixed !important;
+  right: 25px !important;
+  bottom: 102px !important;
+  z-index: 99992 !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
+#__eechatIcon:hover,
+[id="__eechatIcon"]:hover,
+[id*="eechatIcon"]:hover,
 #__eedivChatMain #__eechatIcon:hover {
-  transform: scale(1.08);
+  transform: scale(1.08) !important;
 }
-#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
-  right: 184px !important;
-  bottom: 25px !important;
+#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator,
+#eeChatContainer #eeChatIndicator .indicator,
+#eeChatIndicator .indicator,
+.indicator[id*="eeChat"],
+#__eedivChatMain .indicator {
+  position: fixed !important;
+  right: 98px !important;
+  bottom: 104px !important;
   z-index: 214483647 !important;
 }
-#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after {
-  right: 170px !important;
-  bottom: 51px !important;
+#__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after,
+#eeChatContainer #eeChatIndicator .indicator::after,
+#eeChatIndicator .indicator::after,
+#__eedivChatMain .indicator::after {
+  position: fixed !important;
+  right: 86px !important;
+  bottom: 128px !important;
   z-index: 214483647 !important;
 }
 
+/* Scroll-to-top button - repositioned cleanly above both chatbots */
+.sp-scroll-up {
+  position: fixed !important;
+  bottom: 178px !important;
+  right: 27px !important;
+  width: 58px !important;
+  height: 58px !important;
+  line-height: 58px !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  color: #FFFFFF !important;
+  background: #071A2B !important;
+  border: 1px solid rgba(20, 184, 166, 0.4) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 18px rgba(7, 26, 43, 0.35) !important;
+  z-index: 99980 !important;
+  transition: all 0.25s ease !important;
+}
+.sp-scroll-up:hover {
+  background: #14B8A6 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-3px) scale(1.06) !important;
+  box-shadow: 0 6px 22px rgba(20, 184, 166, 0.5) !important;
+}
+
 @media (max-width: 600px) {
+  #dsbs-chatbot-trigger {
+    right: 20px !important;
+    bottom: 20px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+  #__eechatIcon,
+  [id="__eechatIcon"],
+  [id*="eechatIcon"],
   #__eedivChatMain #__eechatIcon {
-    right: 95px !important;
-    bottom: 23px !important;
+    right: 20px !important;
+    bottom: 92px !important;
   }
-  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
-    right: 170px !important;
+  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator,
+  #eeChatContainer #eeChatIndicator .indicator,
+  #eeChatIndicator .indicator {
+    right: 86px !important;
+    bottom: 94px !important;
+    max-width: 210px !important;
   }
-  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after {
-    right: 156px !important;
+  #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after,
+  #eeChatContainer #eeChatIndicator .indicator::after,
+  #eeChatIndicator .indicator::after {
+    right: 74px !important;
+    bottom: 118px !important;
+  }
+  .sp-scroll-up {
+    bottom: 165px !important;
+    right: 22px !important;
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
   }
 }
 #dsbs-chat-window {
