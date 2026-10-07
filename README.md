@@ -1,6 +1,6 @@
-# Dayananda Sagar Business School (DSBS) - Official Website Replica
+# Admin Business School - Official Website Replica
 
-A modern, high-fidelity replica of the official **[Dayananda Sagar Business School](https://dsbs.edu.in/)** website, featuring complete visual styling, interactive effects, dynamic animations, and institutional data integration.
+A modern, high-fidelity replica of the official **[Admin Business School](https://dsbs.edu.in/)** website, featuring complete visual styling, interactive effects, dynamic animations, and institutional data integration.
 
 ---
 
