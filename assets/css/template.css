@@ -2594,7 +2594,7 @@ div.mod-languages .dropdown-menu li {
 }
 #testimonial-area .sppb-section-title {
   margin-bottom: 30px;
-  padding-left: 384px;
+  padding-left: 0;
 }
 #testimonial-area h3.sppb-title-heading {
   font-family: 'Playfair Display', serif;
