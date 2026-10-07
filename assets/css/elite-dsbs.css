@@ -575,7 +575,264 @@ ul, ol {
 }
 
 /* ==========================================================================
-   5. RIGHT-SIDE STICKY FLOATING ACTION BAR
+   5. LEFT-SIDE STICKY FLOATING ACTION BAR (RELOCATED FROM TOP BAR)
+   ========================================================================== */
+#sp-left-sticky {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.sticky-left-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+}
+
+.main-left-sticky {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.main-left-sticky .drop-left-item {
+  position: relative;
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+  pointer-events: auto;
+}
+
+.main-left-sticky .sub-left-pill {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 24px 24px 0;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.22);
+  transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.25s ease;
+  overflow: hidden;
+  pointer-events: auto;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* 1. Direct Phone Line (Teal #00897B) */
+.main-left-sticky .sub-left-pill.phone-direct {
+  background: #00897B;
+}
+.main-left-sticky .sub-left-pill.phone-direct:hover,
+.main-left-sticky .drop-left-item:hover .sub-left-pill.phone-direct {
+  width: 220px;
+  box-shadow: 4px 5px 18px rgba(0, 137, 123, 0.45);
+}
+.main-left-sticky .sub-left-pill.phone-direct a {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 14px;
+}
+.main-left-sticky .sub-left-pill.phone-direct i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.main-left-sticky .sub-left-pill.phone-direct span {
+  margin-left: 14px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.3;
+  color: #FFFFFF;
+  text-align: left;
+}
+.main-left-sticky .sub-left-pill.phone-direct span strong {
+  font-size: 12px;
+  display: block;
+  font-weight: 700;
+}
+
+/* 2. Mobile Helpline (Emerald Green #059669) */
+.main-left-sticky .sub-left-pill.mobile-helpline {
+  background: #059669;
+}
+.main-left-sticky .sub-left-pill.mobile-helpline:hover,
+.main-left-sticky .drop-left-item:hover .sub-left-pill.mobile-helpline {
+  width: 220px;
+  box-shadow: 4px 5px 18px rgba(5, 150, 105, 0.45);
+}
+.main-left-sticky .sub-left-pill.mobile-helpline a {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+}
+.main-left-sticky .sub-left-pill.mobile-helpline i {
+  font-size: 22px;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.main-left-sticky .sub-left-pill.mobile-helpline span {
+  margin-left: 15px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.3;
+  color: #FFFFFF;
+  text-align: left;
+}
+.main-left-sticky .sub-left-pill.mobile-helpline span strong {
+  font-size: 12px;
+  display: block;
+  font-weight: 700;
+}
+
+/* 3. Email Admissions (Imperial Navy #0B192C with Gold Border) */
+.main-left-sticky .sub-left-pill.email-admissions {
+  background: #0B192C;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-left: none;
+}
+.main-left-sticky .sub-left-pill.email-admissions:hover,
+.main-left-sticky .drop-left-item:hover .sub-left-pill.email-admissions {
+  width: 245px;
+  box-shadow: 4px 5px 18px rgba(11, 25, 44, 0.5);
+  border-color: rgba(212, 175, 55, 0.7);
+}
+.main-left-sticky .sub-left-pill.email-admissions a {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 14px;
+}
+.main-left-sticky .sub-left-pill.email-admissions i {
+  font-size: 18px;
+  color: var(--elite-gold);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.main-left-sticky .sub-left-pill.email-admissions span {
+  margin-left: 14px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.3;
+  color: #FFFFFF;
+  text-align: left;
+}
+.main-left-sticky .sub-left-pill.email-admissions span strong {
+  font-size: 12px;
+  display: block;
+  font-weight: 700;
+  color: var(--elite-gold);
+}
+
+/* 4. Quick Links: Careers & Contact (Warm Gold #C59A27) */
+.main-left-sticky .sub-left-pill.quick-links-pill {
+  background: #C59A27;
+}
+.main-left-sticky .sub-left-pill.quick-links-pill:hover,
+.main-left-sticky .drop-left-item:hover .sub-left-pill.quick-links-pill {
+  width: 205px;
+  box-shadow: 4px 5px 18px rgba(197, 154, 39, 0.45);
+}
+.main-left-sticky .sub-left-pill.quick-links-pill .left-pill-handle {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.main-left-sticky .sub-left-pill.quick-links-pill .left-pill-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 4px;
+}
+.main-left-sticky .sub-left-pill.quick-links-pill .sub-pill-link {
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.main-left-sticky .sub-left-pill.quick-links-pill .sub-pill-link:hover {
+  text-decoration: underline;
+}
+.main-left-sticky .sub-left-pill.quick-links-pill .sub-pill-divider {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+}
+
+/* 5. Social Channels (LinkedIn Blue #0A66C2) */
+.main-left-sticky .sub-left-pill.social-channels-pill {
+  background: #0A66C2;
+}
+.main-left-sticky .sub-left-pill.social-channels-pill:hover,
+.main-left-sticky .drop-left-item:hover .sub-left-pill.social-channels-pill {
+  width: 260px;
+  box-shadow: 4px 5px 18px rgba(10, 102, 194, 0.45);
+}
+.main-left-sticky .sub-left-pill.social-channels-pill .left-pill-handle {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.main-left-sticky .sub-left-pill.social-channels-pill .left-social-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 4px;
+}
+.main-left-sticky .sub-left-pill.social-channels-pill .left-social-row a {
+  color: #FFFFFF;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.main-left-sticky .sub-left-pill.social-channels-pill .left-social-row a:hover {
+  transform: scale(1.25);
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   6. RIGHT-SIDE STICKY FLOATING ACTION BAR
    ========================================================================== */
 #sp-right-sticky {
   position: fixed;
@@ -2162,7 +2419,8 @@ ul, ol {
   .elite-specs-grid {
     grid-template-columns: 1fr;
   }
-  #sp-right-sticky {
+  #sp-right-sticky,
+  #sp-left-sticky {
     display: none; /* Avoid obstructing very small mobile viewport */
   }
 }
