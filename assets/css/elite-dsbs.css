@@ -2277,6 +2277,87 @@ ul, ol {
 }
 
 /* ==========================================================================
+   14B. CAMPUS TOUR CENTERED SECTION
+   ========================================================================== */
+#video-tour-area {
+  background: var(--elite-navy-deep, #071A2B) !important;
+  padding: 80px 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+#video-tour-area .sppb-container-inner,
+#video-tour-area .container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#video-tour-area .sppb-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+#column-id-1562208262469 {
+  padding: 60px 55px !important;
+  background-color: #a22531 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  float: none !important;
+}
+
+#video-tour-area .custom.video-tour {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+#video-tour-area h2.title {
+  color: #FFFFFF !important;
+  font-family: var(--font-serif, "Playfair Display", serif) !important;
+  font-size: 2.25rem !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin-bottom: 24px !important;
+}
+
+#video-tour-area .custom.video-tour h2.title:before {
+  display: none !important;
+}
+
+#video-tour-area p {
+  color: #F8FAFC !important;
+  font-size: 15.5px !important;
+  line-height: 1.8 !important;
+  text-align: justify !important;
+  margin-bottom: 20px !important;
+}
+
+#video-tour-area .content {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-top: 32px !important;
+  width: 100% !important;
+}
+
+#video-tour-area .content a.btn-join {
+  margin: 0 auto !important;
+}
+
+/* ==========================================================================
    15. RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 1200px) {
@@ -2334,6 +2415,16 @@ ul, ol {
   }
   .elite-rolling-text p {
     font-size: 0.8rem;
+  }
+  #video-tour-area {
+    padding: 50px 15px !important;
+  }
+  #column-id-1562208262469 {
+    padding: 35px 22px !important;
+    border-radius: 12px !important;
+  }
+  #video-tour-area h2.title {
+    font-size: 1.75rem !important;
   }
   .footer-grid-row {
     grid-template-columns: 1fr;
