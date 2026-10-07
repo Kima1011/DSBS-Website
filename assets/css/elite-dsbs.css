@@ -2280,12 +2280,23 @@ ul, ol {
   padding: 1.75rem 0 2rem 0;
   text-align: center !important;
   display: flex !important;
+  flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
+  gap: 0.85rem !important;
   width: 100% !important;
   margin: 0 auto !important;
   font-size: 0.8125rem;
   color: #64748B;
+}
+
+.visitor-counter-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  color: #94A3B8;
 }
 
 .footer-copyright-row p {
