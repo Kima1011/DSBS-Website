@@ -5,5 +5,7 @@ __pycache__/
 # Logs & Temporary files
 *.log
 live_homepage.html
+index.backup.html
+index.international.html
 .vscode/
 .idea/
