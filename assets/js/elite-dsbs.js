@@ -156,3 +156,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const chatbotObserver = new MutationObserver(alignDsbsChatbots);
   chatbotObserver.observe(document.body, { childList: true, subtree: true });
 });
+
+// 7. PGDM Feature Topic Modal Trigger
+if (typeof window.openFeatureTopicModal !== 'function') {
+  window.openFeatureTopicModal = function (topic) {
+    if (typeof openContentModal === 'function') {
+      // openContentModal handled in index.html
+    }
+  };
+}
+

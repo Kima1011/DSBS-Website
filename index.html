@@ -912,7 +912,7 @@ header.header.is-sticky {
     to { transform: scale(1); opacity: 1; }
 }
 .content-modal-header {
-    background: linear-gradient(135deg, #3e4095, #1f2268);
+    background: linear-gradient(135deg, #0B192C 0%, #152B47 60%, #0F766E 100%);
     color: #ffffff;
     padding: 18px 25px;
     display: flex;
@@ -2432,13 +2432,17 @@ main#sp-component {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+.elite-feature-card {
+  cursor: pointer !important;
+}
+
 .elite-feature-card:hover {
   transform: translateY(-4px) scale(1.008) !important;
   background: #FFFFFF !important;
-  border-color: rgba(146, 110, 47, 0.4) !important;
+  border-color: rgba(146, 110, 47, 0.45) !important;
   box-shadow: 
     0 20px 40px -10px rgba(11, 25, 44, 0.1),
-    0 6px 18px -2px rgba(146, 110, 47, 0.1),
+    0 6px 18px -2px rgba(146, 110, 47, 0.12),
     inset 0 0 16px rgba(255, 255, 255, 0.8) !important;
 }
 
@@ -2446,6 +2450,27 @@ main#sp-component {
   transform: scale(1.06) !important;
   border-color: #926E2F !important;
   box-shadow: 0 6px 16px rgba(146, 110, 47, 0.2) !important;
+}
+
+.elite-feature-card:hover .elite-feature-text h4 {
+  color: #0F766E !important;
+  transition: color 0.25s ease;
+}
+
+.elite-feature-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #926E2F;
+  margin-top: 8px;
+  transition: all 0.25s ease;
+}
+
+.elite-feature-card:hover .elite-feature-explore-link {
+  color: #0F766E;
+  transform: translateX(4px);
 }
 
 .elite-feature-icon-wrap {
@@ -3511,33 +3536,36 @@ img#__eechatIcon {
 
         <!-- 3 Feature Badges -->
         <div class="elite-features-column">
-          <div class="elite-feature-card">
+          <div class="elite-feature-card" onclick="openFeatureTopicModal('faculty')" role="button" tabindex="0" title="Click to view detailed information on Professors & Pedagogy" onkeydown="if(event.key==='Enter'||event.key===' ')openFeatureTopicModal('faculty')">
             <div class="elite-feature-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
             </div>
             <div class="elite-feature-text">
               <h4>Professors of IIM &amp; Top-notch Global B-Schools</h4>
               <p>Distinguished academicians and visiting global mentors delivering Harvard &amp; IIM case study methodology.</p>
+              <div class="elite-feature-explore-link"><span>Explore Faculty &amp; Pedagogy</span> <i class="fa fa-arrow-right"></i></div>
             </div>
           </div>
 
-          <div class="elite-feature-card">
+          <div class="elite-feature-card" onclick="openFeatureTopicModal('internships')" role="button" tabindex="0" title="Click to view detailed information on Live Projects & Internships" onkeydown="if(event.key==='Enter'||event.key===' ')openFeatureTopicModal('internships')">
             <div class="elite-feature-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
             </div>
             <div class="elite-feature-text">
               <h4>Live Projects &amp; Corporate Internships</h4>
               <p>Hands-on corporate immersion, summer internships with leading MNCs, and executive business mentoring.</p>
+              <div class="elite-feature-explore-link"><span>Explore Internships &amp; Placements</span> <i class="fa fa-arrow-right"></i></div>
             </div>
           </div>
 
-          <div class="elite-feature-card">
+          <div class="elite-feature-card" onclick="openFeatureTopicModal('certifications')" role="button" tabindex="0" title="Click to view detailed information on Certifications & Research" onkeydown="if(event.key==='Enter'||event.key===' ')openFeatureTopicModal('certifications')">
             <div class="elite-feature-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
             </div>
             <div class="elite-feature-text">
               <h4>Industry Ready Certifications &amp; Research</h4>
               <p>High-value skill badges, Bloomberg &amp; Analytics credentials, and publishing in peer-reviewed journals.</p>
+              <div class="elite-feature-explore-link"><span>Explore Certifications &amp; Research</span> <i class="fa fa-arrow-right"></i></div>
             </div>
           </div>
         </div>
@@ -14005,6 +14033,206 @@ function loadPageData(slug, defaultTitle) {
     openContentModal(defaultTitle, html);
   }
 }
+
+// --- FEATURE TOPIC MODAL HANDLER ---
+window.openFeatureTopicModal = function(topic) {
+  var title = '';
+  var html = '';
+
+  if (topic === 'faculty' || topic === 'professors') {
+    title = 'Professors of IIM & Top-notch Global B-Schools';
+    html = '<div class="topic-detail-container">' +
+      '<div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px;">' +
+        '<span style="background:rgba(20,184,166,0.12); color:#0F766E; font-weight:700; font-size:11px; padding:5px 12px; border-radius:20px; text-transform:uppercase; letter-spacing:0.8px; border:1px solid rgba(20,184,166,0.3);"><i class="fa fa-graduation-cap"></i> Academic Pedagogy & Mentorship</span>' +
+        '<span style="background:rgba(146,110,47,0.1); color:#926E2F; font-weight:700; font-size:11px; padding:5px 12px; border-radius:20px; border:1px solid rgba(146,110,47,0.25);"><i class="fa fa-bookmark"></i> Harvard Business Publishing</span>' +
+      '</div>' +
+      '<p style="font-size:15.5px; line-height:1.75; color:#1E293B; margin-bottom:24px;">' +
+        'At Admin Business School, academic excellence is anchored in distinguished faculty mentorship. Our scholars bring teaching methodologies, rigorous research standards, and boardroom insights from premier Indian Institutes of Management (IIMs) and top-notch global universities directly to the PGDM lecture theatre.' +
+      '</p>' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-bottom:24px;">' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#0F766E; margin-bottom:10px;"><i class="fa fa-mortar-board"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">IIM & IIT Pedigree Faculty</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Core academicians with Ph.D and Fellow Program in Management (FPM) credentials from IIM Ahmedabad, IIM Bangalore, IIM Calcutta, and IITs providing deep conceptual grounding.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#926E2F; margin-bottom:10px;"><i class="fa fa-book"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">Harvard & IIM Case Studies</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Active, participant-centered learning using licensed Harvard Business Publishing case scenarios, simulated corporate board debates, and strategic problem-solving.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#1E3A5F; margin-bottom:10px;"><i class="fa fa-users"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">Professors of Practice & CXOs</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Credit-bearing modules delivered by active Chief Executive Officers, Managing Directors, and functional leaders bridging theoretical foundations with current industry dynamics.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#166534; margin-bottom:10px;"><i class="fa fa-globe"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">Global Visiting Mentors</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'International professors and visiting faculty from renowned overseas universities delivering cross-border business modules and global immersion guidance.' +
+          '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div style="background:linear-gradient(135deg, rgba(15,118,110,0.06), rgba(30,58,95,0.08)); border:1px solid rgba(20,184,166,0.25); border-radius:12px; padding:18px 22px; margin-bottom:24px;">' +
+        '<h5 style="margin:0 0 8px 0; font-size:15px; color:#071A2B; font-weight:700;"><i class="fa fa-check-circle" style="color:#14B8A6; margin-right:6px;"></i> High Faculty-Student Engagement Ratio</h5>' +
+        '<p style="margin:0; font-size:13.5px; color:#334155; line-height:1.6;">' +
+          'Every candidate is assigned a faculty mentor for continuous one-on-one coaching, career pathway planning, research publications, and corporate readiness coaching.' +
+        '</p>' +
+      '</div>' +
+      '<div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:16px; border-top:1px solid #E2E8F0;">' +
+        '<button onclick="loadFacultyList()" style="background:#0F172A; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">' +
+          '<i class="fa fa-user-circle-o"></i> View Faculty Profiles Directory' +
+        '</button>' +
+        '<div style="display:flex; gap:10px; flex-wrap:wrap;">' +
+          '<button onclick="openEnquiryDrawer(\'Professors of IIM & Top B-Schools\')" style="background:#0F766E; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer;">' +
+            'Enquire for Admission' +
+          '</button>' +
+          '<a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">' +
+            'Apply Now Online <i class="fa fa-arrow-right"></i>' +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  } else if (topic === 'internships' || topic === 'projects') {
+    title = 'Live Projects & Corporate Internships';
+    html = '<div class="topic-detail-container">' +
+      '<div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px;">' +
+        '<span style="background:rgba(22,101,52,0.12); color:#166534; font-weight:700; font-size:11px; padding:5px 12px; border-radius:20px; text-transform:uppercase; letter-spacing:0.8px; border:1px solid rgba(22,101,52,0.3);"><i class="fa fa-briefcase"></i> Corporate Immersion & Internships</span>' +
+        '<span style="background:rgba(15,118,110,0.1); color:#0F766E; font-weight:700; font-size:11px; padding:5px 12px; border-radius:20px; border:1px solid rgba(15,118,110,0.25);"><i class="fa fa-check-square-o"></i> 100% Paid Internship Assistance</span>' +
+      '</div>' +
+      '<p style="font-size:15.5px; line-height:1.75; color:#1E293B; margin-bottom:24px;">' +
+        'Hands-on corporate execution is embedded into the core structure of the 2-year PGDM curriculum. Students transition from classrooms to executive boardrooms through rigorous, credit-bearing summer internships and live consulting assignments with Fortune 500 corporations and market-leading enterprises.' +
+      '</p>' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-bottom:24px;">' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#166534; margin-bottom:10px;"><i class="fa fa-briefcase"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">8–12 Weeks Summer Immersion</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Mandatory summer internships between Trimesters III and IV. Students undertake full-time corporate projects evaluated jointly by senior corporate mentors and faculty guides.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#0F766E; margin-bottom:10px;"><i class="fa fa-line-chart"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">Live Capstone Assignments</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Active business consulting in market research, financial model valuation, digital campaign management, supply chain audits, and consumer behavior for top industry partners.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#926E2F; margin-bottom:10px;"><i class="fa fa-building-o"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">Marquee Recruiter Network</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Internship drives with prestigious brands including ICICI Bank, TCS, KPMG, EY, PwC, Bajaj Finserv, Bosch, Oracle, and Amazon with competitive monthly stipends.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#1E3A5F; margin-bottom:10px;"><i class="fa fa-trophy"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">PPO Conversion Record</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Substantial percentage of students secure early Pre-Placement Offers (PPOs) based on exceptional performance during summer internships, fast-tracking their career start.' +
+          '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div style="background:linear-gradient(135deg, rgba(22,101,52,0.06), rgba(15,118,110,0.08)); border:1px solid rgba(22,101,52,0.25); border-radius:12px; padding:18px 22px; margin-bottom:24px;">' +
+        '<h5 style="margin:0 0 8px 0; font-size:15px; color:#071A2B; font-weight:700;"><i class="fa fa-star" style="color:#166534; margin-right:6px;"></i> PlaceCom Pro-X Committee</h5>' +
+        '<p style="margin:0; font-size:13.5px; color:#334155; line-height:1.6;">' +
+          'Our student-driven Placement & Corporate Relations cell ensures direct industry networking, pre-internship workshops, mock technical interviews, and resume refinement.' +
+        '</p>' +
+      '</div>' +
+      '<div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:16px; border-top:1px solid #E2E8F0;">' +
+        '<button onclick="loadPageData(\'placements/internship\', \'Internship Statistics\')" style="background:#0F172A; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">' +
+          '<i class="fa fa-bar-chart"></i> View Placement & Internship Statistics' +
+        '</button>' +
+        '<div style="display:flex; gap:10px; flex-wrap:wrap;">' +
+          '<button onclick="openEnquiryDrawer(\'Live Projects & Internships\')" style="background:#0F766E; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer;">' +
+            'Enquire for Admission' +
+          '</button>' +
+          '<a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">' +
+            'Apply Now Online <i class="fa fa-arrow-right"></i>' +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  } else if (topic === 'certifications' || topic === 'research') {
+    title = 'Industry Ready Certifications & Research';
+    html = '<div class="topic-detail-container">' +
+      '<div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px;">' +
+        '<span style="background:rgba(146,110,47,0.12); color:#926E2F; font-weight:700; font-size:11px; padding:5px 12px; border-radius:20px; text-transform:uppercase; letter-spacing:0.8px; border:1px solid rgba(146,110,47,0.3);"><i class="fa fa-certificate"></i> High-Value Skill Credentials</span>' +
+        '<span style="background:rgba(2,132,199,0.1); color:#0284C7; font-weight:700; font-size:11px; padding:5px 12px; border-radius:20px; border:1px solid rgba(2,132,199,0.25);"><i class="fa fa-desktop"></i> Bloomberg & Analytics</span>' +
+      '</div>' +
+      '<p style="font-size:15.5px; line-height:1.75; color:#1E293B; margin-bottom:24px;">' +
+        'In today\'s technology-driven corporate landscape, academic theory is fortified with industry-recognized certifications and empirical research publications, giving Admin Business School graduates a distinct competitive advantage from day one.' +
+      '</p>' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-bottom:24px;">' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#0284C7; margin-bottom:10px;"><i class="fa fa-desktop"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">Bloomberg Terminal & BMC</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Real-time access to financial markets infrastructure. Students complete Bloomberg Market Concepts (BMC) across Equities, Fixed Income, Currencies, and Macroeconomics.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#0F766E; margin-bottom:10px;"><i class="fa fa-database"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">Analytics & AI Tools</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Integrated skill badges in Python for Data Analytics, Advanced SQL, Power BI, Tableau, and Machine Learning applications for managerial forecasting.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#926E2F; margin-bottom:10px;"><i class="fa fa-check-circle-o"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">KPMG Lean Six Sigma Green Belt</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Rigorous quality control and operational excellence certification delivered with KPMG experts, mastering DMAIC and process improvement frameworks.' +
+          '</p>' +
+        '</div>' +
+        '<div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; padding:18px;">' +
+          '<div style="font-size:22px; color:#DC2626; margin-bottom:10px;"><i class="fa fa-file-text-o"></i></div>' +
+          '<h5 style="margin:0 0 6px 0; font-size:15px; color:#0F172A; font-weight:700;">VIMARSHA Conference & Journals</h5>' +
+          '<p style="margin:0; font-size:13.5px; color:#475569; line-height:1.55;">' +
+            'Faculty-student collaborative research papers presented at the annual international VIMARSHA conference and published in Scopus & UGC-CARE indexed journals.' +
+          '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div style="background:linear-gradient(135deg, rgba(146,110,47,0.06), rgba(2,132,199,0.08)); border:1px solid rgba(146,110,47,0.25); border-radius:12px; padding:18px 22px; margin-bottom:24px;">' +
+        '<h5 style="margin:0 0 8px 0; font-size:15px; color:#071A2B; font-weight:700;"><i class="fa fa-book" style="color:#926E2F; margin-right:6px;"></i> Praangan Campus Newsletter</h5>' +
+        '<p style="margin:0; font-size:13.5px; color:#334155; line-height:1.6;">' +
+          'Students serve as editors and analysts for *Praangan*, producing quarterly corporate trend reports, executive interviews, and white papers.' +
+        '</p>' +
+      '</div>' +
+      '<div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:16px; border-top:1px solid #E2E8F0;">' +
+        '<button onclick="loadPageData(\'research-and-publications/praangan\', \'Research & Publications\')" style="background:#0F172A; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer; display:inline-flex; align-items:center; gap:8px;">' +
+          '<i class="fa fa-book"></i> View Research & Publications' +
+        '</button>' +
+        '<div style="display:flex; gap:10px; flex-wrap:wrap;">' +
+          '<button onclick="openEnquiryDrawer(\'Certifications & Research Details\')" style="background:#0F766E; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer;">' +
+            'Enquire for Admission' +
+          '</button>' +
+          '<a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">' +
+            'Apply Now Online <i class="fa fa-arrow-right"></i>' +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  if (title && html) {
+    openContentModal(title, html);
+  }
+};
+
+// Keyboard accessibility for ESC to close modal
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' || e.key === 'Esc') {
+    closeContentModal();
+    if (typeof closeEnquiryDrawer === 'function') closeEnquiryDrawer();
+  }
+});
 </script>
 <script>
 function scrollAccredTrack(direction) {

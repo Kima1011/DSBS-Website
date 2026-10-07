@@ -1338,15 +1338,16 @@ a.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
 }
 
 .elite-feature-card:hover {
   transform: translateY(-4px) scale(1.008) !important;
   background: #FFFFFF !important;
-  border-color: rgba(146, 110, 47, 0.4) !important;
+  border-color: rgba(146, 110, 47, 0.45) !important;
   box-shadow: 
     0 20px 40px -10px rgba(11, 25, 44, 0.1),
-    0 6px 18px -2px rgba(146, 110, 47, 0.1),
+    0 6px 18px -2px rgba(146, 110, 47, 0.12),
     inset 0 0 16px rgba(255, 255, 255, 0.8) !important;
 }
 
@@ -1354,6 +1355,27 @@ a.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
   transform: scale(1.06) !important;
   border-color: var(--elite-gold) !important;
   box-shadow: 0 6px 16px rgba(146, 110, 47, 0.2) !important;
+}
+
+.elite-feature-card:hover .elite-feature-text h4 {
+  color: #0F766E !important;
+  transition: color 0.25s ease;
+}
+
+.elite-feature-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #926E2F;
+  margin-top: 8px;
+  transition: all 0.25s ease;
+}
+
+.elite-feature-card:hover .elite-feature-explore-link {
+  color: #0F766E;
+  transform: translateX(4px);
 }
 
 .elite-feature-icon-wrap {
@@ -1384,12 +1406,14 @@ a.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
   font-weight: 700;
   color: var(--elite-navy);
   margin-bottom: 0.3rem;
+  transition: color 0.25s ease;
 }
 
 .elite-feature-text p {
   font-size: 0.85rem;
   color: var(--elite-text-muted);
   line-height: 1.55;
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
