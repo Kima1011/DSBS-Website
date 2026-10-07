@@ -753,6 +753,15 @@ header.header.is-sticky {
     to { transform: translateY(0); }
 }
 
+/* Ensure SP Page Builder text-center utility centers headings & text */
+.sppb-text-center {
+    text-align: center !important;
+}
+.sppb-text-center > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 /* Ensure FontAwesome icons display cleanly */
 .fa {
     font-family: 'FontAwesome' !important;
@@ -2575,13 +2584,24 @@ main#sp-component {
   padding: 70px 0 !important;
   border-bottom: 1px solid #e2e8f0 !important;
 }
+#testimonial-area .sppb-section-title {
+  text-align: center !important;
+  margin: 0 auto 35px !important;
+  max-width: 800px !important;
+}
 #testimonial-area h2 {
   color: #071A2B !important;
   font-size: 32px !important;
   font-weight: 800 !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 #testimonial-area p {
   color: #64748b !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .custom-testimonial-box {
   background: #FFFFFF !important;
@@ -3429,9 +3449,9 @@ upcoming education for student.</p>
 </div></div></div></div></div></div></div></div></div>
 <section class="sppb-section" id="testimonial-area" style="padding: 70px 0; background: #F8FAFC !important;">
 <div class="sppb-row-container">
-<div class="sppb-section-title sppb-text-center" style="margin-bottom: 35px;">
-<h2 style="color: #071A2B !important; font-weight: 800; font-size: 32px; margin-bottom: 8px;">What Student Says</h2>
-<p style="color: #64748b !important; font-size: 16px;">Real experiences and transformative journeys from our PGDM alumni and students.</p>
+<div class="sppb-section-title sppb-text-center text-center" style="margin: 0 auto 35px; text-align: center !important; max-width: 800px;">
+<h2 style="color: #071A2B !important; font-weight: 800; font-size: 32px; margin-bottom: 8px; text-align: center !important;">What Student Says</h2>
+<p style="color: #64748b !important; font-size: 16px; text-align: center !important; margin: 0 auto;">Real experiences and transformative journeys from our PGDM alumni and students.</p>
 </div>
 <div class="custom-testimonial-box">
 <!-- Slide 1 -->
