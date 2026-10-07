@@ -873,217 +873,6 @@ header.header.is-sticky {
     background: linear-gradient(135deg, #3e4095, #22246b);
 }
 
-/* Chatbot Floating Widget & Window */
-#dsbs-chatbot-trigger {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #3e4095, #e60023);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 25px rgba(62,64,149,0.45);
-    cursor: pointer;
-    z-index: 99990;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-#dsbs-chatbot-trigger:hover {
-    transform: scale(1.08) rotate(5deg);
-}
-#dsbs-chatbot-trigger .badge-pulse {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #25D366;
-    border: 2px solid #fff;
-    animation: badgePulse 2s infinite;
-}
-@keyframes badgePulse {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(37,211,102,0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-}
-#dsbs-chatbot-trigger i {
-    font-size: 26px;
-}
-#dsbs-chat-window {
-    position: fixed;
-    bottom: 95px;
-    right: 25px;
-    width: 380px;
-    max-width: 92vw;
-    height: 540px;
-    max-height: 80vh;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.22);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 99991;
-    transform: translateY(20px) scale(0.95);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-#dsbs-chat-window.open {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    visibility: visible;
-}
-.chat-head {
-    background: linear-gradient(135deg, #3e4095, #1f2268);
-    color: #fff;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.chat-head-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.chat-head-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    padding: 3px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-.chat-head-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.chat-head-text h4 {
-    margin: 0;
-    font-size: 15px;
-    font-weight: 700;
-    color: #fff;
-}
-.chat-head-text span {
-    font-size: 11px;
-    color: #a3e635;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-.chat-head-text span::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #a3e635;
-}
-.chat-head .close-chat {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0.8;
-}
-.chat-head .close-chat:hover { opacity: 1; }
-.chat-messages {
-    flex: 1;
-    padding: 16px;
-    overflow-y: auto;
-    background: #f8fafc;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.msg {
-    max-width: 82%;
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 13px;
-    line-height: 1.45;
-    animation: fadeInMsg 0.25s ease;
-}
-@keyframes fadeInMsg {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.msg.bot {
-    align-self: flex-start;
-    background: #ffffff;
-    color: #1e293b;
-    border: 1px solid #e2e8f0;
-    border-bottom-left-radius: 2px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-.msg.user {
-    align-self: flex-end;
-    background: linear-gradient(135deg, #3e4095, #22246b);
-    color: #ffffff;
-    border-bottom-right-radius: 2px;
-}
-.chat-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 8px;
-}
-.chat-chip {
-    background: #eef2ff;
-    color: #3e4095;
-    border: 1px solid #c7d2fe;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 11px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.chat-chip:hover {
-    background: #3e4095;
-    color: #fff;
-}
-.chat-input-area {
-    padding: 10px 14px;
-    background: #fff;
-    border-top: 1px solid #e2e8f0;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-.chat-input-area input {
-    flex: 1;
-    padding: 9px 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 20px;
-    font-size: 13px;
-    outline: none;
-}
-.chat-input-area input:focus {
-    border-color: #3e4095;
-}
-.chat-input-area button {
-    background: #3e4095;
-    color: #fff;
-    border: none;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-}
-.chat-input-area button:hover {
-    background: #e60023;
-}
 
 /* Data Content Modal for all Navigation Pages */
 #dsbs-content-modal {
@@ -2794,13 +2583,7 @@ footer#sp-footer.sp-footer-custom {
   font-weight: 700 !important;
 }
 
-/* 13. Admissions Chatbot */
-#dsbs-chatbot-trigger {
-  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
-  box-shadow: 0 6px 25px rgba(20, 184, 166, 0.45) !important;
-}
-
-/* ExtraaEdge DSBS Buddy repositioned vertically above green button to prevent overlap */
+/* ExtraaEdge DSBS Buddy Admissions Chatbot */
 #__eechatIcon,
 [id="__eechatIcon"],
 [id*="eechatIcon"],
@@ -2810,7 +2593,7 @@ div#__eechatIcon,
 img#__eechatIcon {
   position: fixed !important;
   right: 25px !important;
-  bottom: 102px !important;
+  bottom: 25px !important;
   z-index: 99992 !important;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
@@ -2827,7 +2610,7 @@ img#__eechatIcon {
 #__eedivChatMain .indicator {
   position: fixed !important;
   right: 98px !important;
-  bottom: 104px !important;
+  bottom: 27px !important;
   z-index: 214483647 !important;
 }
 #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after,
@@ -2836,14 +2619,14 @@ img#__eechatIcon {
 #__eedivChatMain .indicator::after {
   position: fixed !important;
   right: 86px !important;
-  bottom: 128px !important;
+  bottom: 51px !important;
   z-index: 214483647 !important;
 }
 
-/* Scroll-to-top button - repositioned cleanly above both chatbots with centered arrow */
+/* Scroll-to-top button - positioned cleanly above DSBS Buddy with centered arrow */
 .sp-scroll-up {
   position: fixed !important;
-  bottom: 178px !important;
+  bottom: 100px !important;
   right: 27px !important;
   width: 54px !important;
   height: 54px !important;
@@ -2897,95 +2680,33 @@ img#__eechatIcon {
 }
 
 @media (max-width: 600px) {
-  #dsbs-chatbot-trigger {
-    right: 20px !important;
-    bottom: 20px !important;
-    width: 56px !important;
-    height: 56px !important;
-  }
   #__eechatIcon,
   [id="__eechatIcon"],
   [id*="eechatIcon"],
   #__eedivChatMain #__eechatIcon {
     right: 20px !important;
-    bottom: 92px !important;
+    bottom: 20px !important;
   }
   #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator,
   #eeChatContainer #eeChatIndicator .indicator,
   #eeChatIndicator .indicator {
     right: 86px !important;
-    bottom: 94px !important;
+    bottom: 22px !important;
     max-width: 210px !important;
   }
   #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator::after,
   #eeChatContainer #eeChatIndicator .indicator::after,
   #eeChatIndicator .indicator::after {
     right: 74px !important;
-    bottom: 118px !important;
+    bottom: 46px !important;
   }
   .sp-scroll-up {
-    bottom: 165px !important;
+    bottom: 95px !important;
     right: 22px !important;
     width: 50px !important;
     height: 50px !important;
     line-height: 50px !important;
   }
-}
-#dsbs-chat-window {
-  background: #FFFFFF !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 16px 50px rgba(7, 26, 43, 0.25) !important;
-}
-.chat-head {
-  background: #071A2B !important;
-  border-bottom: 2px solid #14B8A6 !important;
-}
-.chat-head-text h4 {
-  color: #FFFFFF !important;
-}
-.chat-head-text span {
-  color: #14B8A6 !important;
-}
-.chat-head-text span::before {
-  background: #14B8A6 !important;
-}
-.chat-messages {
-  background: #F8FAFC !important;
-}
-.msg.bot {
-  background: #FFFFFF !important;
-  color: #071A2B !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
-}
-.msg.user {
-  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
-  color: #FFFFFF !important;
-}
-.quick-reply-btn {
-  background: #FFFFFF !important;
-  border: 1px solid #0F766E !important;
-  color: #0F766E !important;
-}
-.quick-reply-btn:hover {
-  background: #0F766E !important;
-  color: #FFFFFF !important;
-}
-.chat-input-area {
-  background: #FFFFFF !important;
-  border-top: 1px solid #e2e8f0 !important;
-}
-.chat-input-area input {
-  background: #F8FAFC !important;
-  border: 1px solid #cbd5e1 !important;
-  color: #071A2B !important;
-}
-.chat-input-area input:focus {
-  border-color: #0F766E !important;
-}
-.chat-input-area button {
-  background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%) !important;
-  color: #FFFFFF !important;
 }
 
 /* 14. Quick Enquiry Drawer & Navigation Modal */
@@ -4233,47 +3954,6 @@ upcoming education for student.</p>
         🔒 Your contact information is 100% confidential.
       </div>
 </form>
-</div>
-</div>
-<!-- Floating Admissions Chatbot Trigger -->
-<div id="dsbs-chatbot-trigger" onclick="toggleChatWindow()" title="Chat with Admissions Expert">
-<div class="badge-pulse"></div>
-<i class="fa fa-comments"></i>
-</div>
-<!-- Interactive Admin Business School Admissions Chatbot Window -->
-<div id="dsbs-chat-window">
-<div class="chat-head">
-<div class="chat-head-info">
-<div class="chat-head-avatar">
-<img alt="Admin Business School Logo" src="images/dsblogo-1.png"/>
-</div>
-<div class="chat-head-text">
-<h4>Admission Expert</h4>
-<span>Online • Admin Business School Support</span>
-</div>
-</div>
-<button class="close-chat" onclick="toggleChatWindow()">×</button>
-</div>
-<div class="chat-messages" id="chat-messages-container">
-<div class="msg bot">
-      Hello! 👋 Welcome to <strong>Admin Business School (Admin Business School)</strong>, Bangalore.
-      <br/><br/>
-      I am your <strong>Admissions Expert</strong>. How can I assist you with your PGDM (AICTE Approved) journey today?
-      
-      <div class="chat-chips">
-<span class="chat-chip" onclick="handleChipClick('About PGDM')">📘 About PGDM</span>
-<span class="chat-chip" onclick="handleChipClick('Eligibility')">📋 Eligibility</span>
-<span class="chat-chip" onclick="handleChipClick('Placements')">💼 Placements</span>
-<span class="chat-chip" onclick="handleChipClick('Fee Structure')">💰 Fees &amp; Aid</span>
-<span class="chat-chip" onclick="handleChipClick('Recruiters')">🏢 Top Recruiters</span>
-<span class="chat-chip" onclick="handleChipClick('Apply Online')">📝 Apply Online</span>
-<span class="chat-chip" onclick="handleChipClick('Request Callback')">📞 Call Back</span>
-</div>
-</div>
-</div>
-<div class="chat-input-area">
-<input id="chat-input-field" onkeypress="handleChatKeyPress(event)" placeholder="Ask about admissions, fees, placements..." type="text"/>
-<button onclick="sendChatMessage()"><i class="fa fa-paper-plane"></i></button>
 </div>
 </div>
 <!-- Content Modal for Navigation Subpages -->
@@ -13906,88 +13586,6 @@ function handleEnquirySubmit(e) {
   }, 4000);
 }
 
-// --- CHATBOT LOGIC ---
-var isChatOpen = false;
-function toggleChatWindow() {
-  var win = document.getElementById('dsbs-chat-window');
-  isChatOpen = !isChatOpen;
-  if (isChatOpen) {
-    win.classList.add('open');
-  } else {
-    win.classList.remove('open');
-  }
-}
-
-// Open chatbot gently after 4 seconds
-setTimeout(function() {
-  if (!isChatOpen) {
-    toggleChatWindow();
-  }
-}, 4000);
-
-function appendBotMessage(html) {
-  var container = document.getElementById('chat-messages-container');
-  var msg = document.createElement('div');
-  msg.className = 'msg bot';
-  msg.innerHTML = html;
-  container.appendChild(msg);
-  container.scrollTop = container.scrollHeight;
-}
-
-function appendUserMessage(text) {
-  var container = document.getElementById('chat-messages-container');
-  var msg = document.createElement('div');
-  msg.className = 'msg user';
-  msg.innerText = text;
-  container.appendChild(msg);
-  container.scrollTop = container.scrollHeight;
-}
-
-function handleChipClick(topic) {
-  appendUserMessage(topic);
-  setTimeout(function() {
-    respondToTopic(topic);
-  }, 400);
-}
-
-function handleChatKeyPress(e) {
-  if (e.key === 'Enter') {
-    sendChatMessage();
-  }
-}
-
-function sendChatMessage() {
-  var input = document.getElementById('chat-input-field');
-  var text = input.value.trim();
-  if (!text) return;
-  appendUserMessage(text);
-  input.value = '';
-  setTimeout(function() {
-    respondToTopic(text);
-  }, 450);
-}
-
-function respondToTopic(query) {
-  var q = query.toLowerCase();
-  if (q.includes('about') || q.includes('program') || q.includes('pgdm')) {
-    appendBotMessage('<strong>About Admin Business School PGDM:</strong><br>Admin Business School offers an approved 2-Year Full-Time Post Graduate Diploma in Management (PGDM) with Dual Specialization.<br><br>✨ <strong>Specializations:</strong><br>• Marketing<br>• Financial Management<br>• Human Resource Management<br>• Business Analytics<br>• Supply Chain & Operations<br><br>Students benefit from global immersion, live corporate internships, and mentoring by IIM faculty and industry leaders.');
-  } else if (q.includes('eligib') || q.includes('criteria') || q.includes('admission')) {
-    appendBotMessage('<strong>Eligibility Criteria for Admissions:</strong><br>• Bachelor’s Degree in any discipline from a recognized University with minimum 50% aggregate (45% for SC/ST).<br>• Valid score in any National Management Entrance Exam: CAT, MAT, XAT, CMAT, ATMA, or GMAT.<br>• Performance in Personal Interview & Micro Presentation.<br><br><button onclick="openEnquiryDrawer()" style="background:linear-gradient(135deg, #0F766E, #14B8A6);color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:600;;font-weight:600;margin-top:5px;">Apply Online Now</button>');
-  } else if (q.includes('place') || q.includes('salary') || q.includes('pack')) {
-    appendBotMessage('<strong>Placement Highlights:</strong><br>• 100% Placement Support & Dedicated Placement Cell.<br>• <strong>Highest CTC:</strong> ₹14.0 LPA.<br>• <strong>Average CTC:</strong> ₹7.5 LPA.<br>• Over 200+ top recruiting partners across IT, BFSI, FMCG, and Consulting.');
-  } else if (q.includes('recruit') || q.includes('company') || q.includes('companies')) {
-    appendBotMessage('<strong>Top Corporate Recruiters:</strong><br>• Bosch, Bajaj Finserv, KPMG, EY, PwC<br>• Oracle, TCS, ICICI Bank, Cognizant<br>• HDFC, Deloitte, Berger Paints, Federal Bank<br><br>Our corporate mentorship program connects students directly with HR heads and CXOs.');
-  } else if (q.includes('fee') || q.includes('cost') || q.includes('scholarship')) {
-    appendBotMessage('<strong>Fee Structure & Financial Aid:</strong><br>• Competitive fee structure with installment payment facilities.<br>• Meritorious scholarships available for high MAT/CAT percentiles and academic toppers.<br>• Education loan assistance tie-ups with leading national banks (SBI, Canara Bank, HDFC).');
-  } else if (q.includes('callback') || q.includes('contact') || q.includes('phone') || q.includes('call')) {
-    appendBotMessage('<strong>Request a Callback:</strong><br>You can reach our Admissions Helpline directly at <strong>+91 9611515262</strong> / <strong>+91 80 42161704</strong>.<br>Or click below to leave your contact number:<br><br><button onclick="openEnquiryDrawer()" style="background:#e60023;color:#fff;border:none;padding:8px 14px;border-radius:4px;cursor:pointer;font-weight:700;">Request Callback</button>');
-  } else if (q.includes('apply')) {
-    openEnquiryDrawer();
-    appendBotMessage('I have opened the online application form for you on the right side. Please fill in your basic details to proceed!');
-  } else {
-    appendBotMessage('Thank you for your question about <em>"' + query + '"</em>. Admin Business School offers comprehensive PGDM programs with dual specializations. Would you like to connect directly with an Admissions Counselor?<br><br><button onclick="openEnquiryDrawer()" style="background:linear-gradient(135deg, #0F766E, #14B8A6);color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;font-weight:600;;font-weight:600;">Contact Admissions</button>');
-  }
-}
 
 // --- SUBPAGE CONTENT MODAL LOGIC ---
 function openContentModal(title, htmlContent) {

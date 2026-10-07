@@ -40,27 +40,27 @@ window.addEventListener("load", async function (event) {
       script.onload = function () {
         eeChatBot.init(clientInfo.clientAlias, clientInfo.clientId);
         
-        // Dynamically enforce clean vertical positioning above the green admissions trigger
+        // Dynamically enforce clean bottom-right positioning for DSBS Buddy
         function applyBotPosition() {
           var icon = document.getElementById("__eechatIcon");
           if (icon) {
             icon.style.setProperty('position', 'fixed', 'important');
             icon.style.setProperty('right', '25px', 'important');
-            icon.style.setProperty('bottom', '102px', 'important');
+            icon.style.setProperty('bottom', '25px', 'important');
             icon.style.setProperty('z-index', '99992', 'important');
           }
           var indicator = document.querySelector("#eeChatIndicator .indicator") || document.querySelector(".indicator");
           if (indicator) {
             indicator.style.setProperty('position', 'fixed', 'important');
             indicator.style.setProperty('right', '98px', 'important');
-            indicator.style.setProperty('bottom', '104px', 'important');
+            indicator.style.setProperty('bottom', '27px', 'important');
             indicator.style.setProperty('z-index', '214483647', 'important');
           }
           var indicatorArrow = document.querySelector("#eeChatIndicator .indicator::after") || document.querySelector(".indicator::after");
           if (indicatorArrow) {
             indicatorArrow.style.setProperty('position', 'fixed', 'important');
             indicatorArrow.style.setProperty('right', '86px', 'important');
-            indicatorArrow.style.setProperty('bottom', '128px', 'important');
+            indicatorArrow.style.setProperty('bottom', '51px', 'important');
             indicatorArrow.style.setProperty('z-index', '214483647', 'important');
           }
         }

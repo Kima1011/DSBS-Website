@@ -25,19 +25,9 @@ A modern, high-fidelity replica of the official **[Admin Business School](https:
 - **Animated Numeric Counters**: Dynamic counters that count up when scrolled into view.
 - **Sticky Header & Back-to-Top**: Shrinking sticky header with shadow and smooth scroll-to-top button.
 
-### 🤖 3. Built-In Admissions Chatbot
-- Floating interactive chatbot trigger at bottom-right with animated pulsing badge.
-- Auto-greeting after 4 seconds to assist prospective applicants.
-- Quick chips for instant answers on:
-  - 📘 *About PGDM Programme*
-  - 📋 *Eligibility & Selection Criteria*
-  - 💼 *Placement Records & Average CTC*
-  - 💰 *Fee Structure & Scholarships*
-  - 🏢 *Top Recruiters*
-  - 📞 *Request a Callback*
-  - 📝 *Apply Online*
-- Natural language query response handling based on the institutional dataset.
-- In-chat lead capture form for instant call-back requests.
+### 🤖 3. DSBS Buddy Admissions Chatbot Integration
+- Official ExtraaEdge CRM DSBS Buddy chatbot for admissions assistance and guidance.
+- Clean positioning at bottom-right alongside the smooth scroll-to-top button.
 
 ### 📚 4. Institutional Dataset Integration
 - Powered by `dsbs_data.json` containing 61 pages, 120 faculty profiles, and 696 document references.
