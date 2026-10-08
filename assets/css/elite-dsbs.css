@@ -1147,7 +1147,7 @@ ul, ol {
 }
 
 /* Clickable Application Status Card */
-a.elite-metric-card.elite-application-status-card {
+.elite-metric-card.elite-application-status-card {
   text-decoration: none !important;
   color: inherit !important;
   cursor: pointer !important;
@@ -1157,22 +1157,22 @@ a.elite-metric-card.elite-application-status-card {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover {
+.elite-metric-card.elite-application-status-card:hover {
   transform: translateY(-5px) !important;
   background: #FFFFFF !important;
   border-color: #166534 !important;
   box-shadow: 0 14px 28px -4px rgba(22, 101, 52, 0.18), 0 6px 14px -2px rgba(146, 110, 47, 0.1) !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover::before {
+.elite-metric-card.elite-application-status-card:hover::before {
   background: #166534 !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover .elite-metric-label {
+.elite-metric-card.elite-application-status-card:hover .elite-metric-label {
   color: #166534 !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
+.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
   color: #15803d !important;
   transform: scale(1.02);
   transition: transform 0.25s ease, color 0.25s ease;

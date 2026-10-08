@@ -2482,7 +2482,7 @@ main#sp-component {
 }
 
 /* Application Status Card - Clickable Redirection to Application Channel */
-a.elite-metric-card.elite-application-status-card {
+.elite-metric-card.elite-application-status-card {
   text-decoration: none !important;
   color: inherit !important;
   cursor: pointer !important;
@@ -2492,22 +2492,22 @@ a.elite-metric-card.elite-application-status-card {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover {
+.elite-metric-card.elite-application-status-card:hover {
   transform: translateY(-5px) !important;
   background: #FFFFFF !important;
   border-color: #166534 !important;
   box-shadow: 0 14px 28px -4px rgba(22, 101, 52, 0.18), 0 6px 14px -2px rgba(146, 110, 47, 0.1) !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover::before {
+.elite-metric-card.elite-application-status-card:hover::before {
   background: #166534 !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover .elite-metric-label {
+.elite-metric-card.elite-application-status-card:hover .elite-metric-label {
   color: #166534 !important;
 }
 
-a.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
+.elite-metric-card.elite-application-status-card:hover .elite-metric-value {
   color: #15803d !important;
   transform: scale(1.02);
   transition: transform 0.25s ease, color 0.25s ease;
@@ -3426,7 +3426,7 @@ img#__eechatIcon {
     <div class="elite-container">
       <!-- Live Admission Ticker -->
       <div class="elite-ticker-bar">
-        <a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" class="elite-ticker-link">
+        <a href="javascript:void(0)" onclick="openEnquiryDrawer('Admissions Ticker')" class="elite-ticker-link" title="Admissions Open - Enquire Now">
           <span class="elite-ticker-badge">Admissions Active</span>
           <span>Admissions Open for 2027–2029 Batch • Dual Specialization PGDM</span>
           <i class="fa fa-arrow-right"></i>
@@ -3489,11 +3489,11 @@ img#__eechatIcon {
           <p class="elite-metric-desc">Complete tuition with installment aid</p>
         </div>
 
-        <a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" class="elite-metric-card highlight elite-application-status-card" style="text-decoration: none; cursor: pointer;" title="Apply Now - Open 2027–29">
-          <span class="elite-metric-label">Application Status <i class="fa fa-external-link" style="margin-left: 4px; font-size: 0.72rem; opacity: 0.75;"></i></span>
+        <div class="elite-metric-card highlight elite-application-status-card" onclick="openEnquiryDrawer('Application Status - Open 2027-29')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openEnquiryDrawer('Application Status - Open 2027-29')" style="cursor: pointer;" title="Apply Now - Open 2027–29">
+          <span class="elite-metric-label">Application Status <i class="fa fa-arrow-right" style="margin-left: 4px; font-size: 0.72rem; opacity: 0.75;"></i></span>
           <div class="elite-metric-value" style="font-size: 1.25rem; color: #166534;">Open 2027–29</div>
-          <p class="elite-metric-desc">Rolling admissions process</p>
-        </a>
+          <p class="elite-metric-desc">Rolling admissions process • Tap to Apply</p>
+        </div>
       </div>
 
       <!-- Prominent Apply CTA Bar with Rolling Animation -->
@@ -3504,9 +3504,9 @@ img#__eechatIcon {
             <p>Begin your transformation under distinguished faculty and corporate leaders at Admin Business School.</p>
           </div>
         </div>
-        <a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" class="elite-btn elite-btn-gold" style="font-size: 0.95rem; padding: 1rem 2.25rem;">
+        <button onclick="openEnquiryDrawer('Dashboard CTA - Apply Now')" class="elite-btn elite-btn-gold" style="font-size: 0.95rem; padding: 1rem 2.25rem; border: none; cursor: pointer;">
           Apply Now Online <i class="fa fa-arrow-right"></i>
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -3660,9 +3660,9 @@ img#__eechatIcon {
           </div>
 
           <div class="elite-spec-list-footer">
-            <a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" class="elite-btn elite-btn-gold" style="font-size: 0.95rem; padding: 1rem 2.75rem;">
+            <button onclick="openEnquiryDrawer('Dual Specialization - Apply')" class="elite-btn elite-btn-gold" style="font-size: 0.95rem; padding: 1rem 2.75rem; border: none; cursor: pointer;">
               Apply For Dual Specialization <i class="fa fa-arrow-right"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -3680,9 +3680,9 @@ img#__eechatIcon {
         <div class="elite-gold-line"></div>
         <p>Join an ambitious cohort of future CEOs, entrepreneurs, and global leaders. Experience world-class faculty mentoring, corporate immersions, and a 100% placement track record.</p>
         <div class="elite-cta-banner-actions">
-          <a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" class="elite-btn elite-btn-gold" style="font-size: 1rem; padding: 1.1rem 2.75rem;">
+          <button onclick="openEnquiryDrawer('Bottom Banner - Apply Now')" class="elite-btn elite-btn-gold" style="font-size: 1rem; padding: 1.1rem 2.75rem; border: none; cursor: pointer;">
             Apply Now ! <i class="fa fa-arrow-right"></i>
-          </a>
+          </button>
           <button class="elite-btn elite-btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.35); font-size: 1rem; padding: 1.1rem 2.25rem;" onclick="openEnquiryDrawer('Bottom Banner Callback')">
             <i class="fa fa-phone"></i> Request Callback
           </button>
@@ -3820,7 +3820,7 @@ img#__eechatIcon {
 <h2 class="title">Take a Tour In Campus</h2>
 <p style="text-align: justify;">Admin Business School is situated in the sylvan surroundings of the Garden City of Bangalore. Traditionally, Bangalore has been an important centre of Carnatic culture, now grown into a modern cosmopolitan city. Along with this metamorphosis, the city has emerged as a high-tech centre for manufacturing, services and information technology and has acquired the name of Silicon Valley of India.</p>
 <p style="text-align: justify; margin-top: 30px;">The PGDM programme approved by AICTE under the banner of Admin Business School came in to existence in the year 2007. It was conceived with an objective to meet the growing needs of management graduates in the corporate sector of Indian economy.</p>
-<div class="content"><a class="btn-join" href="https://dsbs.edu.in/apply-now/" rel="noopener" target="_blank" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; height: 48px !important; line-height: 1 !important; padding: 0 38px !important; box-sizing: border-box !important; vertical-align: middle !important; text-align: center !important;">Apply Now !</a> <!--<div class="info"><img src="/images/icon-video.png" alt="video" /><a href="https://youtu.be/uyFTyHQ9Oj8" target="_blank" rel="noopener" id="various3">Take a Video Tour</a></div>--></div>
+<div class="content"><a class="btn-join" href="javascript:void(0)" onclick="openEnquiryDrawer('Campus Tour - Apply Now')" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; height: 48px !important; line-height: 1 !important; padding: 0 38px !important; box-sizing: border-box !important; vertical-align: middle !important; text-align: center !important; cursor: pointer;">Apply Now !</a> <!--<div class="info"><img src="/images/icon-video.png" alt="video" /><a href="https://youtu.be/uyFTyHQ9Oj8" target="_blank" rel="noopener" id="various3">Take a Video Tour</a></div>--></div>
 </div>
 </div></div>
 </div></div></div></div></div></div></div></div></div>
@@ -5327,7 +5327,7 @@ window.dsbsData = {
       "category": "Institutional Content",
       "subcategory": "Apply-Now",
       "title": "Admin Business School (Admin Business School) - PGDM Admissions 2026",
-      "url": "https://dsbs.edu.in/apply-now",
+      "url": "/admissions",
       "sections": [
         {
           "heading": "Admin Business School (Admin Business School) - PGDM Admissions 2026",
@@ -14093,9 +14093,9 @@ window.openFeatureTopicModal = function(topic) {
           '<button onclick="openEnquiryDrawer(\'Professors of IIM & Top B-Schools\')" style="background:#0F766E; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer;">' +
             'Enquire for Admission' +
           '</button>' +
-          '<a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">' +
+          '<button onclick="closeContentModal(); openEnquiryDrawer(\'Faculty & Pedagogy - Apply\');" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; border:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px; cursor:pointer;">' +
             'Apply Now Online <i class="fa fa-arrow-right"></i>' +
-          '</a>' +
+          '</button>' +
         '</div>' +
       '</div>' +
     '</div>';
@@ -14153,9 +14153,9 @@ window.openFeatureTopicModal = function(topic) {
           '<button onclick="openEnquiryDrawer(\'Live Projects & Internships\')" style="background:#0F766E; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer;">' +
             'Enquire for Admission' +
           '</button>' +
-          '<a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">' +
+          '<button onclick="closeContentModal(); openEnquiryDrawer(\'Live Projects & Internships - Apply\');" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; border:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px; cursor:pointer;">' +
             'Apply Now Online <i class="fa fa-arrow-right"></i>' +
-          '</a>' +
+          '</button>' +
         '</div>' +
       '</div>' +
     '</div>';
@@ -14213,9 +14213,9 @@ window.openFeatureTopicModal = function(topic) {
           '<button onclick="openEnquiryDrawer(\'Certifications & Research Details\')" style="background:#0F766E; color:#FFFFFF; border:none; padding:10px 18px; border-radius:8px; font-weight:600; font-size:13.5px; cursor:pointer;">' +
             'Enquire for Admission' +
           '</button>' +
-          '<a href="https://dsbs.edu.in/apply-now" target="_blank" rel="noopener" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; text-decoration:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px;">' +
+          '<button onclick="closeContentModal(); openEnquiryDrawer(\'Certifications & Research - Apply\');" style="background:linear-gradient(135deg, #C5A880, #926E2F); color:#FFFFFF; border:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:6px; cursor:pointer;">' +
             'Apply Now Online <i class="fa fa-arrow-right"></i>' +
-          '</a>' +
+          '</button>' +
         '</div>' +
       '</div>' +
     '</div>';
