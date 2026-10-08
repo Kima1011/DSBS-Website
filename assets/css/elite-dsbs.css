@@ -2144,26 +2144,26 @@ ul, ol {
 
 .footer-col-brand,
 .footer-col-contact {
-  flex: 1 1 400px !important;
-  max-width: 465px !important;
+  flex: 1 1 420px !important;
+  max-width: 480px !important;
   min-width: 300px !important;
-  background: linear-gradient(145deg, rgba(11, 35, 59, 0.7) 0%, rgba(5, 20, 36, 0.88) 100%) !important;
-  border: 1px solid rgba(20, 184, 166, 0.22) !important;
-  border-radius: 16px !important;
-  padding: 2.25rem 2.25rem !important;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35) !important;
-  backdrop-filter: blur(10px) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.5rem 1rem !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  transition: none !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
 }
 
 .footer-col-brand:hover,
 .footer-col-contact:hover {
-  border-color: rgba(20, 184, 166, 0.45) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(20, 184, 166, 0.12) !important;
-  transform: translateY(-3px) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 .footer-logo-wrap {
@@ -2175,10 +2175,10 @@ ul, ol {
 .footer-logo {
   height: 48px !important;
   width: auto !important;
-  max-width: 220px !important;
+  max-width: 240px !important;
   object-fit: contain !important;
   display: block !important;
-  filter: brightness(0) invert(1) !important;
+  filter: none !important;
 }
 
 .footer-col-title {
@@ -2221,11 +2221,11 @@ ul, ol {
 }
 
 .footer-contact-item:hover .contact-icon-box {
-  background: #14B8A6 !important;
-  color: #071A2B !important;
-  border-color: #14B8A6 !important;
-  transform: scale(1.08) !important;
-  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.45) !important;
+  background: transparent !important;
+  color: #2DD4BF !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 .footer-contact-item:hover .contact-link {
@@ -2233,18 +2233,18 @@ ul, ol {
 }
 
 .contact-icon-box {
-  width: 40px !important;
-  height: 40px !important;
-  min-width: 40px !important;
-  border-radius: 10px !important;
-  background: rgba(20, 184, 166, 0.12) !important;
-  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: none !important;
   color: #14B8A6 !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   font-size: 16px !important;
-  transition: all 0.25s ease !important;
+  transition: color 0.2s ease !important;
   margin-top: 2px !important;
 }
 
