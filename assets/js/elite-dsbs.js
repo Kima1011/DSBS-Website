@@ -1,5 +1,5 @@
 /**
- * DSBS - Admin Business School (Dayananda Sagar)
+ * DSBS - Admin Business School (Admin)
  * Elite Institutional Interactive Script
  */
 

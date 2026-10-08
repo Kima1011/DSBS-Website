@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Dayananda Sagar Business School (DSBS) - Apply Now Interactive Logic
-   Direct Replica of https://dsbs.edu.in/apply-now/
+   Admin Business School (DSBS) - Apply Now Interactive Logic
+   Direct Replica of Apply Now Page
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
